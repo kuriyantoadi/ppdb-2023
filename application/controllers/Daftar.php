@@ -14,7 +14,9 @@ class Daftar extends CI_Controller {
 //Login User
   public function index()
   {
-    $this->load->view('login_tekno');
+    $this->load->view('template/header-daftar.php');
+    $this->load->view('daftar/formulir');
+    $this->load->view('template/footer-daftar.php');
   }
 
 //Login Tekno
