@@ -387,7 +387,7 @@
       </div>
 
       <center>
-        <div class="form-group align-text-bottom mt-lg-4">
+        <div class="form-group align-text-bottom mt-lg-4" style="margin-bottom: 60px;">
           <b class="control-label mt-6">Data dan Berkas Sudah Sesuai?</b>
           <div class="col-sm-6 mt-lg-2 md-lg-2">
             <select class="form-control" name="cek_submit" id="" require>
@@ -397,18 +397,15 @@
           </div>
 
           <button type="submit" name="upload" value="upload" class="btn btn-primary mb-lg-4 mt-lg-4">Submit</button>
-
         </div>
       </center>
 
-
-
-
-
     </div>
+
     <div class="col">
       <!-- kosong -->
     </div>
+
   </div>
 
 </div> <!-- container -->

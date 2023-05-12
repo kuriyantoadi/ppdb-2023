@@ -1,17 +1,40 @@
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<footer class="bg-light text-center">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
+
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    Email : ppdb@smkn1kragilan.sch.id |
+    © 2023 Copyright:
+    <a class="text-dark" href="#"> IT SMKN 1 Kragilan</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- End of .container -->
+
+<!-- footer akhir -->
+
+
 <script src="<?= base_url() ?>assets/datepicker/js/jquery.min.js"></script>
 <script src="<?= base_url() ?>assets/datepicker/js/bootstrap.min.js"></script>
 <script src="<?= base_url() ?>assets/datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="<?= base_url() ?>assets/datepicker/js/custom.js"></script>
 
 <script>
-
-$(document).ready(function(){
+  $(document).ready(function() {
     setDatePicker()
     setDateRangePicker(".startdate", ".enddate")
     setMonthPicker()
     setYearPicker()
     setYearRangePicker(".startyear", ".endyear")
-})
+  })
 
   $(document).ready(function() {
     $("#domainsTable").tablesorter({
@@ -50,8 +73,6 @@ $(document).ready(function(){
       }
     }
   }
-
-
 </script>
 </body>
 
