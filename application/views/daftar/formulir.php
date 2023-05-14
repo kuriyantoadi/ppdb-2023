@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <center><img style="margin-top: 25px;" src="../../assets/images/logo-banten.png" />
+        <center><img style="margin-top: 25px;" src="<?= base_url() ?>assets/images/logo-banten.png" />
       </div>
       <div class="col-md-6">
         <center>
@@ -22,7 +22,7 @@
         <!-- font ganti jenis -->
       </div>
       <div class="col-md-3">
-        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" src="../../assets/images/logo-smkn1.png" />
+        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" src="<?= base_url() ?>assets/images/logo-smkn1.png" />
       </div>
     </div>
   </div>
