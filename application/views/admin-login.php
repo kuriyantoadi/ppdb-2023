@@ -46,7 +46,7 @@
 
 <?php include 'admin-layouts/vendor-scripts.php'; ?>
 
-<script src="assets/js/app.js"></script>
+<script src="<?= base_url() ?>assets/js/app.js"></script>
 
 </body>
 

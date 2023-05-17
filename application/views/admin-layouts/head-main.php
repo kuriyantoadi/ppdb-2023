@@ -10,7 +10,7 @@ if( isset( $_SESSION['lang'] ) ) {
 }else {
     $lang = "en";
 }
-require_once ("./assets/lang/" . $lang . ".php");
+require_once (base_url()."assets/lang/" . $lang . ".php");
 
 ?>
 <!DOCTYPE html>

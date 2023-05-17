@@ -1,7 +1,7 @@
 <!-- if you select vertical Menu then comment Horizontal Menu and uncomment this-->
 <?php
 
-include 'layouts/vertical-menu.php';
+include 'admin-layouts/vertical-menu.php';
 
 ?>
 
