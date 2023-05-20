@@ -138,31 +138,86 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i class="dripicons-checklist"></i>
-                                    <span data-key="t-apps">Data Operator</span>
+                                    <span data-key="t-apps">Operator Raport</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="#">
-                                            <span data-key="">OP Raport</span>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
                                         </a>
                                     </li>
+
                                     <li>
-                                        <a href="#">
-                                            <span data-key="">OP Berkas</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OP Wawancara</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OP Akademik</span>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Berkas</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Wawancara</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Akademik</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="dripicons-user"></i>
+                                    <span data-key="">User Operator PPDB</span>
+                                </a>
+                            </li>
+
                         </ul>
                         <!-- Left Menu End -->
 
