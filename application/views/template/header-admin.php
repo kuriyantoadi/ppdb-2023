@@ -116,7 +116,6 @@
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i class="dripicons-checklist"></i>
@@ -125,22 +124,44 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
                                         <a href="op-raport-siswa.php">
-                                            <span data-key="t-calendar">Teknik Komputer Jaringan</span>
+                                            <span data-key="">Teknik Komputer Jaringan</span>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href="apps-chat.php">
-                                            <span data-key="t-chat">Akuntamsi</span>
+                                            <span data-key="">Akuntamsi</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="dripicons-user"></i>
-                                    <span data-key="t-apps">Data Guru Piket</span>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Data Operator</span>
                                 </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OP Raport</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OP Berkas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OP Wawancara</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OP Akademik</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                         <!-- Left Menu End -->
