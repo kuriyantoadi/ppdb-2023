@@ -12,13 +12,58 @@ class Login extends CI_Controller {
 
   public function index()
   {
-    $this->load->view('siswa-daftar');
+    $this->load->view('siswa/login');
   }
 
   //Login Siswa Tekno Awal
-  public function siswa_tekno()
+  public function login_siswa()
   {
-    $this->load->view('login_tekno');
+    $nisn_siswa = htmlspecialchars($this->input->post('nisn_siswa', true), ENT_QUOTES);
+    $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
+
+    $cek_login = $this->M_login->login_siswa($nisn_siswa, $password);
+
+    if ($cek_login->num_rows() > 0) {
+     $data = $cek_login->row_array();
+
+      if ($data['status_siswa']=='siswa') {
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
+        $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
+        redirect('Siswa/index');
+
+      }else {
+        $url = site_url('Login/index');
+        echo $this->session->set_flashdata('msg', '
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          NISN atau Password Salah<br> Silahkan Login Kembali
+        </div>
+        ');
+        redirect($url);
+
+      }
+
+      // $url = site_url('index.php/C_login/siswa_tekno');
+      $url = site_url('Login/index');
+      echo $this->session->set_flashdata('msg', '
+
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        NISN atau Password Salah<br> Silahkan Login Kembali
+      </div>
+      ');
+      redirect($url);
+    }
+
+    $url = site_url('Login/index');
+      echo $this->session->set_flashdata('msg', '
+
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        NISN atau Password Salah<br> Silahkan Login Kembali
+      </div>
+      ');
+      redirect($url);
+
   }
 
   public function login_tekno()
@@ -70,60 +115,6 @@ class Login extends CI_Controller {
   }
   //Login Siswa Tekno Akhir
 
-
-    //Login Siswa Bismen Awal
-    public function siswa_bismen()
-    {
-      $this->load->view('login_bismen');
-    }
-
-    public function login_bismen()
-    {
-      $nisn_siswa = htmlspecialchars($this->input->post('nisn_siswa', true), ENT_QUOTES);
-      $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
-
-      var_dump($nisn_siswa);
-      var_dump($password);
-
-      $cek_login = $this->M_login->login_bismen($nisn_siswa, $password);
-
-      if ($cek_login->num_rows() > 0) {
-        $data = $cek_login->row_array();
-
-        if ($data['status']=='siswa') {
-          $this->session->set_userdata('siswa', true);
-          $this->session->set_userdata('ses_id', $data['id_siswa']);
-          $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
-          redirect('C_siswa/dashboard_bismen');
-
-        // }elseif ($data['status']=='pimpinan') {
-        //   $this->session->set_userdata('pimpinan', true);
-        //   $this->session->set_userdata('ses_id', $data['id_user']);
-        //   $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        //
-        //   redirect('C_pimpinan/dashboard');
-        }else {
-          $url = site_url('C_login/siswa_bismen');
-          echo $this->session->set_flashdata('msg', '
-
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            NISN atau Password Salah<br> Silahkan Login Kembali
-          </div>
-          ');
-          redirect($url);
-        }
-
-      }
-
-      $this->session->set_flashdata('msg', '
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        NISN atau Password Salah<br> Silahkan Login Kembali
-      </div>
-      ');
-      $url = site_url('C_login/siswa_bismen');
-      redirect($url);
-    }
-    //Login Siswa Tekno Akhir
 
 
 // Login Admin

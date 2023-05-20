@@ -19,6 +19,11 @@ class Siswa extends CI_Controller {
 //Login User
   public function index()
   {
+    $this->load->view('siswa/dashboard');
+  }
+
+  public function Login()
+  {
     $this->load->view('login_tekno');
   }
 
