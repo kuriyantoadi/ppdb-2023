@@ -1,4 +1,4 @@
-<?php include 'admin-layouts/header.php'; ?>
+<!-- <?php include 'admin-layouts/header.php'; ?> -->
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->
@@ -94,4 +94,4 @@
     <!-- End Page-content -->
 
 
-    <?php include 'admin-layouts/footer.php'; ?>
+    <!-- <?php include 'admin-layouts/footer.php'; ?> -->

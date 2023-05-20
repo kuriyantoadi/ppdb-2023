@@ -1,4 +1,3 @@
-<?php include 'admin-layouts/header.php'; ?>
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->
@@ -30,16 +29,16 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="admin-raport-siswa.php" class="btn btn-dark waves-effect waves-light">Kembali</a>
-                            <a href="#" class="btn btn-danger waves-effect waves-light">Reset</a>
-                            <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light">Edit</a>
+                            <a href="admin-raport-siswa.php" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                            <a href="#" class="btn btn-danger waves-effect waves-light btn-sm">Reset</a>
+                            <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
                         </div>
                         <div class="card-body p-4">
 
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <table class="table mb-0">
+                                        <table class="table table-bordered mb-0">
                                             <thead>
                                                 <tr>
                                                     <th colspan="2" class="text-center"><h4>Data Lengkap Siswa Baru</h4></th>
@@ -93,5 +92,3 @@
     </div>
     <!-- End Page-content -->
 
-
-    <?php include 'admin-layouts/footer.php'; ?>

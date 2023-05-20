@@ -1,4 +1,4 @@
-<?php include 'admin-layouts/header.php'; ?>
+<!-- <?php include 'admin-layouts/header.php'; ?> -->
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->
@@ -51,10 +51,10 @@
                                         <td>Edinburgh</td>
                                         <td>SMP UNGGUL SERANG</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning waves-effect waves-light">Reset</a>
-                                            <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light">Edit</a>
-                                            <a href="#" class="btn btn-danger waves-effect waves-light">Hapus</a>
-                                            <a href="admin-raport-siswa-detail.php" class="btn btn-info waves-effect waves-light">Lihat</a>
+                                            <a href="#" class="btn btn-warning waves-effect waves-light btn-sm">Reset</a>
+                                            <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
+                                            <a href="#" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
+                                            <a href="admin-raport-siswa-detail.php" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -70,4 +70,4 @@
     <!-- End Page-content -->
 
 
-    <?php include 'admin-layouts/footer.php'; ?>
+    <!-- <?php include 'admin-layouts/footer.php'; ?> -->
