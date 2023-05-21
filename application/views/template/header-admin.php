@@ -103,13 +103,11 @@
             <div class="vertical-menu">
 
                 <div data-simplebar class="h-100">
-
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" data-key="t-menu">Admin PPDB</li>
-
                             <li>
                                 <a href="index.php">
                                     <i class="dripicons-home"></i>
@@ -119,37 +117,42 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i class="dripicons-checklist"></i>
-                                    <span data-key="t-apps">Data Siswa Baru</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="op-raport-siswa.php">
-                                            <span data-key="">Teknik Komputer Jaringan</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="apps-chat.php">
-                                            <span data-key="">Akuntamsi</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-checklist"></i>
                                     <span data-key="t-apps">Operator Raport</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="op-raport-siswa.php">
-                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        <a href="#">
+                                            <span data-key="">Semua</span>
                                         </a>
                                     </li>
-
                                     <li>
-                                        <a href="apps-chat.php">
-                                            <span data-key="">Akuntamsi</span>
+                                        <a href="#">
+                                            <span data-key="">TKJ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">RPL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">AKL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OTKP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TPM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TKR</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -161,14 +164,38 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="op-raport-siswa.php">
-                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        <a href="#">
+                                            <span data-key="">Semua</span>
                                         </a>
                                     </li>
-
                                     <li>
-                                        <a href="apps-chat.php">
-                                            <span data-key="">Akuntamsi</span>
+                                        <a href="#">
+                                            <span data-key="">TKJ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">RPL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">AKL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OTKP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TPM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TKR</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -180,14 +207,38 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="op-raport-siswa.php">
-                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        <a href="#">
+                                            <span data-key="">Semua</span>
                                         </a>
                                     </li>
-
                                     <li>
-                                        <a href="apps-chat.php">
-                                            <span data-key="">Akuntamsi</span>
+                                        <a href="#">
+                                            <span data-key="">TKJ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">RPL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">AKL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OTKP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TPM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TKR</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -199,14 +250,38 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="op-raport-siswa.php">
-                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        <a href="#">
+                                            <span data-key="">Semua</span>
                                         </a>
                                     </li>
-
                                     <li>
-                                        <a href="apps-chat.php">
-                                            <span data-key="">Akuntamsi</span>
+                                        <a href="#">
+                                            <span data-key="">TKJ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">RPL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">AKL</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">OTKP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TPM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span data-key="">TKR</span>
                                         </a>
                                     </li>
                                 </ul>
