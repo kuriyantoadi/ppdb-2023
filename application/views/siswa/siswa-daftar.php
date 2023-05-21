@@ -36,12 +36,14 @@
     </div>
     <div class="col-8">
 
-    <?= form_open('Daftar/daftar_up') ?>
+    <?= form_open_multipart('Daftar/daftar_up') ?>
+
+    <form>
 
       <h5>A. IDENTITAS CALON PESERTA DIDIK</h5>
       <div class="form-group">
         <label class="control-label mt-3" for="email">Tanggal Pendaftaran :</label>
-        <input type="text" class="form-control" name="tgl_pendfataran" value="<?php echo date('d-m-Y'); ?>" required readonly>
+        <input type="text" class="form-control" name="tgl_pendaftaran" value="<?php echo date('d-m-Y'); ?>" required readonly>
       </div>
       <div class="form-group">
         <label class="control-label mt-3" for="email">Kompetensi Keahlian :</label>
@@ -72,7 +74,7 @@
 
       <div class="form-group">
         <label class="control-label mt-3" for="email">NISN :</label>
-        <input type="number" class="form-control" placeholder="NISN" name="nisn" required>
+        <input type="number" class="form-control" placeholder="NISN" name="nisn_siswa" required>
       </div>
 
       <div class="form-group">
@@ -388,7 +390,7 @@
       <div class="form-group">
         <b class="control-label mt-3">SKHUN atau Surat Keterangan Lulus</b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file" id="cek_skhu" required>
+          <input type="file" name="file_skl" accept="application/pdf" class="form-control-file" id="cek_skhu" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
@@ -396,7 +398,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Rapor Semester 1</b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_rapor1" accept="application/pdf" class="form-control-file" required>
+          <input type="file" name="file_raport_1" accept="application/pdf" class="form-control-file" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
@@ -404,28 +406,28 @@
       <div class="form-group">
         <b class="control-label mt-3">Rapor Semester 2 </b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_rapor2" accept="application/pdf" class="form-control-file" required>
+          <input type="file" name="file_raport_2" accept="application/pdf" class="form-control-file" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
       <div class="form-group">
         <b class="control-label mt-3">Rapor Semester 3 </b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_rapor3" accept="application/pdf" class="form-control-file" required>
+          <input type="file" name="file_raport_3" accept="application/pdf" class="form-control-file" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
       <div class="form-group">
         <b class="control-label mt-3">Rapor Semester 4 </b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_rapor4" accept="application/pdf" class="form-control-file" required>
+          <input type="file" name="file_raport_4" accept="application/pdf" class="form-control-file" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
       <div class="form-group">
         <b class="control-label mt-3">Rapor Semester 5 </b>
         <div class="col-sm-6">
-          <input type="file" name="pdf_rapor5" accept="application/pdf" class="form-control-file" required>
+          <input type="file" name="file_raport_5" accept="application/pdf" class="form-control-file" required>
           <p>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</p>
         </div>
       </div>
@@ -445,7 +447,7 @@
       </center>
 
     <?= form_close() ?>
-
+</form>
     </div>
 
     <div class="col">

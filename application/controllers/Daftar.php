@@ -7,7 +7,7 @@ class Daftar extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('M_login');
+    $this->load->model('M_daftar');
     $this->load->model('M_siswa');
   }
 
@@ -24,8 +24,8 @@ class Daftar extends CI_Controller
     // $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim', 'required');
 
     $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim','required','min_length[3]');
-    $this->form_validation->set_rules('kompentesi_keahlian','Kompentesi_keahlian', 'trim','required','min_length[3]');
-    $this->form_validation->set_rules('kompentesi_keahlian_2','Kompentesi_keahlian_2', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('kompetensi_keahlian','kompetensi_keahlian', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('kompetensi_keahlian_2','kompetensi_keahlian_2', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('nisn_siswa','Nisn_siswa', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('asal_sekolah','Asal_sekolah', 'trim','required','min_length[3]');
    
@@ -87,7 +87,7 @@ class Daftar extends CI_Controller
     } else {
 
     // awal cek dan upload file skl
-      $config['upload_path'] = './asstes/upload_file';
+      $config['upload_path'] = 'assets/upload_file';
       $config['allowed_types'] = 'pdf';
       $config['max_size'] = '400'; //MB
       $config['encrypt_name']     = TRUE;
@@ -97,14 +97,18 @@ class Daftar extends CI_Controller
 
       if (!$this->upload->do_upload('file_skl')) {
         //file gagal diupload -> kembali ke form tambah
-       $url = site_url('Daftar/index');
-       echo $this->session->set_flashdata('msg', '
+      //  $url = site_url('Daftar/index');
+      //  echo $this->session->set_flashdata('msg', '
 
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-         Proses Pendaftaran gagal, file SKL terlalu besar/SKL tidak PDF.
-        </div>
-        ');
-      redirect($url);
+      //   <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      //    Proses Pendaftaran gagal, file SKL terlalu besar/SKL tidak PDF.
+      //   </div>
+      //   ');
+      // redirect($url);
+
+       $error = array('error' => $this->upload->display_errors());
+            echo var_dump($error);
+            exit();
 
       } else {
         $upload_skl = $this->upload->data();
@@ -112,14 +116,7 @@ class Daftar extends CI_Controller
     // akhir cek dan upload file skl
 
     // awal cek dan upload file raport 1
-      $config['upload_path'] = './asstes/upload_file';
-      $config['allowed_types'] = 'pdf';
-      $config['max_size'] = '400'; //MB
-      $config['encrypt_name']     = TRUE;
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
-
+   
       if (!$this->upload->do_upload('file_raport_1')) {
         //file gagal diupload -> kembali ke form tambah
        $url = site_url('Daftar/index');
@@ -138,13 +135,6 @@ class Daftar extends CI_Controller
 
 
     // awal cek dan upload file raport 2
-      $config['upload_path'] = './asstes/upload_file';
-      $config['allowed_types'] = 'pdf';
-      $config['max_size'] = '400'; //MB
-      $config['encrypt_name']     = TRUE;
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
 
       if (!$this->upload->do_upload('file_raport_2')) {
         //file gagal diupload -> kembali ke form tambah
@@ -164,14 +154,6 @@ class Daftar extends CI_Controller
 
 
     // awal cek dan upload file raport 3
-      $config['upload_path'] = './asstes/upload_file';
-      $config['allowed_types'] = 'pdf';
-      $config['max_size'] = '400'; //MB
-      $config['encrypt_name']     = TRUE;
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
-
       if (!$this->upload->do_upload('file_raport_3')) {
         //file gagal diupload -> kembali ke form tambah
        $url = site_url('Daftar/index');
@@ -190,14 +172,6 @@ class Daftar extends CI_Controller
 
 
     // awal cek dan upload file raport 4
-      $config['upload_path'] = './asstes/upload_file';
-      $config['allowed_types'] = 'pdf';
-      $config['max_size'] = '400'; //MB
-      $config['encrypt_name']     = TRUE;
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
-
       if (!$this->upload->do_upload('file_raport_4')) {
         //file gagal diupload -> kembali ke form tambah
        $url = site_url('Daftar/index');
@@ -216,14 +190,6 @@ class Daftar extends CI_Controller
 
 
     // awal cek dan upload file raport 5
-      $config['upload_path'] = './asstes/upload_file';
-      $config['allowed_types'] = 'pdf';
-      $config['max_size'] = '400'; //MB
-      $config['encrypt_name']     = TRUE;
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
-
       if (!$this->upload->do_upload('file_raport_5')) {
         //file gagal diupload -> kembali ke form tambah
        $url = site_url('Daftar/index');
@@ -238,38 +204,23 @@ class Daftar extends CI_Controller
       } else {
         $upload_raport5 = $this->upload->data();
       }
+
     // akhir cek dan upload file raport 5
-    
-      $config['upload_path'] = './uploads/';
-      $config['allowed_types'] = 'jpg|png';
-      $config['max_size'] = '400'; //MB
- 
-
-      $this->load->library('upload', $config);
-      $this->upload->initialize($config);
-
-      if (!$this->upload->do_upload('gambar1')) {
-        //file gagal diupload -> kembali ke form tambah
-        $this->load->view('backend/form_tambah_product');
-      } else {
-        $upload_data2 = $this->upload->data();
-      }
-      //file berhasil diupload -> lanjutkan ke query INSERT
 
       // eksekusi query INSERT
       $data_tambah = array(
 
         'tgl_pendaftaran'   => set_value('tgl_pendaftaran'),
-        'kompentesi_keahlian' => set_value('kompentesi_keahlian'),
-        'kompentesi_keahlian_2' => set_value('kompentesi_keahlian_2'),
+        'kompetensi_keahlian' => set_value('kompetensi_keahlian'),
+        'kompetensi_keahlian_2' => set_value('kompetensi_keahlian_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'asal_sekolah'   => set_value('asal_sekolah'),
         'nama_siswa'   => set_value('nama_siswa'),
-        'jenis_kelaimin'   => set_value('jenis_kelaimin'),
+        'jenis_kelamin'   => set_value('jenis_kelamin'),
         'tempat_lahir'   => set_value('tempat_lahir'),
         'tgl_lahir'   => set_value('tgl_lahir'),
         'tahun_lulus'   => set_value('tahun_lulus'),
-        'no_swa_siswa'   => set_value('no_swa_siswa'),
+        'no_wa_siswa'   => set_value('no_wa_siswa'),
         'alamat'   => set_value('alamat'),
         'nama_org_tua'   => set_value('nama_org_tua'),
         'no_wa_org_tua'   => set_value('no_wa_org_tua'),
@@ -298,13 +249,16 @@ class Daftar extends CI_Controller
         'sm_5_mtk'   => set_value('sm_5_mtk'),
         'sm_5_ipa'   => set_value('sm_5_ipa'),
         'sm_5_bing'   => set_value('sm_5_bing'),
+
+        'status_siswa'   => 'siswa',
+
         
-        'file_skl' => $upload_skl['file_skl'],
-        'file_raport_1' => $upload_raport1['file_raport_1'],
-        'file_raport_2' => $upload_raport1['file_raport_2'],
-        'file_raport_3' => $upload_raport1['file_raport_3'],
-        'file_raport_4' => $upload_raport1['file_raport_4'],
-        'file_raport_5' => $upload_raport1['file_raport_5'],
+        'file_skl' => $upload_skl['file_name'],
+        'file_raport_1' => $upload_raport1['file_name'],
+        'file_raport_2' => $upload_raport2['file_name'],
+        'file_raport_3' => $upload_raport3['file_name'],
+        'file_raport_4' => $upload_raport4['file_name'],
+        'file_raport_5' => $upload_raport5['file_name'],
 
 
       );
