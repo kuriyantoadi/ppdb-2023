@@ -442,7 +442,7 @@
             </select>
           </div>
 
-          <input type="submit" class="btn btn-sm btn-info">Submit</input>
+          <input type="submit" class="btn btn-sm btn-primary mt-4"></input>
         </div>
       </center>
 

@@ -96,19 +96,10 @@ class Daftar extends CI_Controller
       $this->upload->initialize($config);
 
       if (!$this->upload->do_upload('file_skl')) {
-        //file gagal diupload -> kembali ke form tambah
-      //  $url = site_url('Daftar/index');
-      //  echo $this->session->set_flashdata('msg', '
-
-      //   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      //    Proses Pendaftaran gagal, file SKL terlalu besar/SKL tidak PDF.
-      //   </div>
-      //   ');
-      // redirect($url);
 
        $error = array('error' => $this->upload->display_errors());
             echo var_dump($error);
-            exit();
+            // exit();
 
       } else {
         $upload_skl = $this->upload->data();
@@ -252,17 +243,29 @@ class Daftar extends CI_Controller
 
         'status_siswa'   => 'siswa',
 
-        
         'file_skl' => $upload_skl['file_name'],
         'file_raport_1' => $upload_raport1['file_name'],
         'file_raport_2' => $upload_raport2['file_name'],
         'file_raport_3' => $upload_raport3['file_name'],
         'file_raport_4' => $upload_raport4['file_name'],
-        'file_raport_5' => $upload_raport5['file_name'],
-
+        'file_raport_5' => $upload_raport5['file_name']
 
       );
+
       $this->M_daftar->siswa_daftar_up($data_tambah);
+
+      $url = site_url('Daftar/index');
+      echo $this->session->set_flashdata('msg', '
+
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          test
+        </div>
+        ');
+      redirect($url);
+
+      
+
+
     }
     
   }
@@ -273,55 +276,55 @@ class Daftar extends CI_Controller
 
   // akhir contoh
 
-  public function prestasi_tambah_up()
-  {
-    $config['upload_path']      = 'assets/photo_prestasi/';
-    $config['allowed_types']    = 'gif|jpg|png';
-    $config['max_size']         = 4000;
-    $config['encrypt_name']     = TRUE;
-    // $id_lapangan = $this->input->post('id_lapangan');
+  // public function prestasi_tambah_up()
+  // {
+  //   $config['upload_path']      = 'assets/photo_prestasi/';
+  //   $config['allowed_types']    = 'gif|jpg|png';
+  //   $config['max_size']         = 4000;
+  //   $config['encrypt_name']     = TRUE;
+  //   // $id_lapangan = $this->input->post('id_lapangan');
 
 
-    $this->load->library('upload', $config);
-    if (!$this->upload->do_upload('photo_prestasi')) {
-      $error = array('error' => $this->upload->display_errors());
-      echo var_dump($error);
-      // $this->load->view('upload', $error);
-    } else {
-      $_data = array('upload_data' => $this->upload->data());
+  //   $this->load->library('upload', $config);
+  //   if (!$this->upload->do_upload('photo_prestasi')) {
+  //     $error = array('error' => $this->upload->display_errors());
+  //     echo var_dump($error);
+  //     // $this->load->view('upload', $error);
+  //   } else {
+  //     $_data = array('upload_data' => $this->upload->data());
 
-      $id_siswa = $this->input->post('id_siswa');
-      $tanggal_pelaksanaan = $this->input->post('tanggal_pelaksanaan');
-      $nama_kegiatan = $this->input->post('nama_kegiatan');
-      $juara_ke = $this->input->post('juara_ke');
-      $tingkat = $this->input->post('tingkat');
-      $tempat_lomba = $this->input->post('tempat_lomba');
-      $tim_individu = $this->input->post('tim_individu');
-      $penyelenggara_acara = $this->input->post('penyelenggara_acara');
+  //     $id_siswa = $this->input->post('id_siswa');
+  //     $tanggal_pelaksanaan = $this->input->post('tanggal_pelaksanaan');
+  //     $nama_kegiatan = $this->input->post('nama_kegiatan');
+  //     $juara_ke = $this->input->post('juara_ke');
+  //     $tingkat = $this->input->post('tingkat');
+  //     $tempat_lomba = $this->input->post('tempat_lomba');
+  //     $tim_individu = $this->input->post('tim_individu');
+  //     $penyelenggara_acara = $this->input->post('penyelenggara_acara');
 
-      $data_tambah = array(
-        'photo_prestasi' => $_data['upload_data']['file_name'],
-        'id_siswa' => $id_siswa,
-        'tanggal_pelaksanaan' => $tanggal_pelaksanaan,
-        'nama_kegiatan' => $nama_kegiatan,
-        'juara_ke' => $juara_ke,
-        'tingkat' => $tingkat,
-        'tempat_lomba' => $tempat_lomba,
-        'tim_individu' => $tim_individu,
-        'penyelenggara_acara' => $penyelenggara_acara
-      );
+  //     $data_tambah = array(
+  //       'photo_prestasi' => $_data['upload_data']['file_name'],
+  //       'id_siswa' => $id_siswa,
+  //       'tanggal_pelaksanaan' => $tanggal_pelaksanaan,
+  //       'nama_kegiatan' => $nama_kegiatan,
+  //       'juara_ke' => $juara_ke,
+  //       'tingkat' => $tingkat,
+  //       'tempat_lomba' => $tempat_lomba,
+  //       'tim_individu' => $tim_individu,
+  //       'penyelenggara_acara' => $penyelenggara_acara
+  //     );
 
-      $this->M_admin->prestasi_tambah_up($data_tambah);
+  //     $this->M_admin->prestasi_tambah_up($data_tambah);
 
-      $this->session->set_flashdata('msg', '
-						<div class="alert alert-primary alert-dismissible fade show" role="alert">
-							<strong>Tambah Prestasi Berhasil</strong>
+  //     $this->session->set_flashdata('msg', '
+	// 					<div class="alert alert-primary alert-dismissible fade show" role="alert">
+	// 						<strong>Tambah Prestasi Berhasil</strong>
 
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>');
-      redirect('Guru_bk/siswa_detail/' . $id_siswa);
-    }
-  }
+	// 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	// 							<span aria-hidden="true">&times;</span>
+	// 						</button>
+	// 					</div>');
+  //     redirect('Guru_bk/siswa_detail/' . $id_siswa);
+  //   }
+  // }
 }
