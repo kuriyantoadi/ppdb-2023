@@ -43,33 +43,33 @@ class Daftar extends CI_Controller
    
     $this->form_validation->set_rules('no_wa_org_tua','No_wa_org_tua', 'trim|required|min_length[1]');
     $this->form_validation->set_rules('sm_1_agama','Sm_1_agama', 'trim|required');
-    // $this->form_validation->set_rules('sm_1_bindo','Sm_1_bindo','trim|required');
-    // $this->form_validation->set_rules('sm_1_mtk','Sm_1_mtk', 'trim|required');
-    // $this->form_validation->set_rules('sm_1_ipa','Sm_1_ipa', 'trim|required');
-    // $this->form_validation->set_rules('sm_1_bing','Sm_1_bing', 'trim|required');
+    $this->form_validation->set_rules('sm_1_bindo','Sm_1_bindo','trim|required');
+    $this->form_validation->set_rules('sm_1_mtk','Sm_1_mtk', 'trim|required');
+    $this->form_validation->set_rules('sm_1_ipa','Sm_1_ipa', 'trim|required');
+    $this->form_validation->set_rules('sm_1_bing','Sm_1_bing', 'trim|required');
 
-    // $this->form_validation->set_rules('sm_2_agama','Sm_2_agama', 'trim|required');
-    // $this->form_validation->set_rules('sm_2_bindo','Sm_2_bindo', 'trim|required');
-    // $this->form_validation->set_rules('sm_2_mtk','Sm_3_bindo', 'trim|required');
-    // $this->form_validation->set_rules('sm_2_ipa','Sm_2_ipa', 'trim|required');
-    // $this->form_validation->set_rules('sm_2_bing','Sm_2_bing', 'trim|required');
-    // $this->form_validation->set_rules('sm_3_agama','Sm_3_agama', 'trim|required');
-    // $this->form_validation->set_rules('sm_3_bindo','Sm_3_bindo', 'trim|required');
-    // $this->form_validation->set_rules('sm_3_mtk','Sm_3_mtk', 'trim|required');
-    // $this->form_validation->set_rules('sm_3_ipa','Sm_3_ipa', 'trim|required');
-    // $this->form_validation->set_rules('sm_3_bing','Sm_3_bing', 'trim|required');
+    $this->form_validation->set_rules('sm_2_agama','Sm_2_agama', 'trim|required');
+    $this->form_validation->set_rules('sm_2_bindo','Sm_2_bindo', 'trim|required');
+    $this->form_validation->set_rules('sm_2_mtk','Sm_3_bindo', 'trim|required');
+    $this->form_validation->set_rules('sm_2_ipa','Sm_2_ipa', 'trim|required');
+    $this->form_validation->set_rules('sm_2_bing','Sm_2_bing', 'trim|required');
+    $this->form_validation->set_rules('sm_3_agama','Sm_3_agama', 'trim|required');
+    $this->form_validation->set_rules('sm_3_bindo','Sm_3_bindo', 'trim|required');
+    $this->form_validation->set_rules('sm_3_mtk','Sm_3_mtk', 'trim|required');
+    $this->form_validation->set_rules('sm_3_ipa','Sm_3_ipa', 'trim|required');
+    $this->form_validation->set_rules('sm_3_bing','Sm_3_bing', 'trim|required');
 
-    // $this->form_validation->set_rules('sm_4_agama','Sm_4_agama', 'trim|required');
-    // $this->form_validation->set_rules('sm_4_bindo','Sm_4_bindo', 'trim|required');
-    // $this->form_validation->set_rules('sm_4_mtk','Sm_4_mtk', 'trim|required');
-    // $this->form_validation->set_rules('sm_4_ipa','Sm_4_ipa', 'trim|required');
-    // $this->form_validation->set_rules('sm_4_bing','Sm_4_bing', 'trim|required');
+    $this->form_validation->set_rules('sm_4_agama','Sm_4_agama', 'trim|required');
+    $this->form_validation->set_rules('sm_4_bindo','Sm_4_bindo', 'trim|required');
+    $this->form_validation->set_rules('sm_4_mtk','Sm_4_mtk', 'trim|required');
+    $this->form_validation->set_rules('sm_4_ipa','Sm_4_ipa', 'trim|required');
+    $this->form_validation->set_rules('sm_4_bing','Sm_4_bing', 'trim|required');
 
-    // $this->form_validation->set_rules('sm_5_agama','Sm_5_agama', 'trim|required');
-    // $this->form_validation->set_rules('sm_5_bindo','Sm_5_bindo', 'trim|required');
-    // $this->form_validation->set_rules('sm_5_mtk','Sm_5_mtk', 'trim|required');
-    // $this->form_validation->set_rules('sm_5_ipa','Sm_5_ipa', 'trim|required');
-    // $this->form_validation->set_rules('sm_5_bing','Sm_5_bing', 'trim|required');
+    $this->form_validation->set_rules('sm_5_agama','Sm_5_agama', 'trim|required');
+    $this->form_validation->set_rules('sm_5_bindo','Sm_5_bindo', 'trim|required');
+    $this->form_validation->set_rules('sm_5_mtk','Sm_5_mtk', 'trim|required');
+    $this->form_validation->set_rules('sm_5_ipa','Sm_5_ipa', 'trim|required');
+    $this->form_validation->set_rules('sm_5_bing','Sm_5_bing', 'trim|required');
 
     if ($this->form_validation->run() == FALSE) {
       // $url = site_url('Daftar/index');

@@ -178,14 +178,14 @@
       <div class="form-group">
         <b class="control-label mt-1">Agama </b>(Jika nilai Agama lebih 1, maka nilai agama di rata-rata terlebih dahulu)
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 1 Agama" name="sem1_agama" required>
+          <input type="number" class="form-control" placeholder="Semester 1 Agama" name="sm_1_agama" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
       <div class="form-group">
         <b class="control-label mt-1">Bahasa Indonesia</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 1 Bahasa Indonesia" name="sem1_b_indo" required>
+          <input type="number" class="form-control" placeholder="Semester 1 Bahasa Indonesia" name="sm_1_bindo" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
 
@@ -193,21 +193,21 @@
       <div class="form-group">
         <b class="control-label mt-1">Matematika</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 1 Matematik" name="sem1_mtk" required>
+          <input type="number" class="form-control" placeholder="Semester 1 Matematik" name="sm_1_mtk" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
       <div class="form-group">
         <b class="control-label mt-1">IPA</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 1 IPA" name="sem1_ipa" required>
+          <input type="number" class="form-control" placeholder="Semester 1 IPA" name="sm_1_ipa" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
       <div class="form-group">
         <b class="control-label mt-1">Bahasa Inggris</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 1 Bahasa Inggris" name="sem1_b_ing" required>
+          <input type="number" class="form-control" placeholder="Semester 1 Bahasa Inggris" name="sm_1_bing" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -217,7 +217,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Agama </b>(Jika nilai Agama lebih 1, maka nilai agama di rata-rata terlebih dahulu)
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 2 Agama" name="sem2_agama" required>
+          <input type="number" class="form-control" placeholder="Semester 2 Agama" name="sm_2_agama" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -225,7 +225,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Bahasa Indonesia</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 2 Bahasa Indonesia" name="sem2_b_indo" required>
+          <input type="number" class="form-control" placeholder="Semester 2 Bahasa Indonesia" name="sm_2_bindo" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -233,7 +233,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Matematika</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 2 Matematik" name="sem2_mtk" required>
+          <input type="number" class="form-control" placeholder="Semester 2 Matematik" name="sm_2_mtk" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -241,7 +241,7 @@
       <div class="form-group">
         <b class="control-label mt-1">IPA</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 2 IPA" name="sem2_ipa" required>
+          <input type="number" class="form-control" placeholder="Semester 2 IPA" name="sm_2_ipa" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -249,7 +249,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Bahasa Inggris</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 2 Bahasa Inggris" name="sem2_b_ing" required>
+          <input type="number" class="form-control" placeholder="Semester 2 Bahasa Inggris" name="sm_2_bing" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -259,7 +259,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Agama </b>(Jika nilai Agama lebih 1, maka nilai agama di rata-rata terlebih dahulu)
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 3 Agama" name="sem3_agama" required>
+          <input type="number" class="form-control" placeholder="Semester 3 Agama" name="sm_3_agama" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -267,7 +267,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Indonesia</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 3 Bahasa Indonesia" name="sem3_b_indo" required>
+          <input type="number" class="form-control" placeholder="Semester 3 Bahasa Indonesia" name="sm_3_bindo" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -275,7 +275,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Matematika</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 3 Matematik" name="sem3_mtk" required>
+          <input type="number" class="form-control" placeholder="Semester 3 Matematik" name="sm_3_mtk" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -283,7 +283,7 @@
       <div class="form-group">
         <b class="control-label mt-3">IPA</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 3 IPA" name="sem3_ipa" required>
+          <input type="number" class="form-control" placeholder="Semester 3 IPA" name="sm_3_ipa" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -291,7 +291,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Inggris</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 3 Bahasa Inggris" name="sem3_b_ing" required>
+          <input type="number" class="form-control" placeholder="Semester 3 Bahasa Inggris" name="sm_3_bing" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -301,7 +301,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Agama </b>(Jika nilai Agama lebih 1, maka nilai agama di rata-rata terlebih dahulu)
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 4 Agama" name="sem4_agama" required>
+          <input type="number" class="form-control" placeholder="Semester 4 Agama" name="sm_4_agama" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -309,7 +309,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Indonesia</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 4 Bahasa Indonesia" name="sem4_b_indo" required>
+          <input type="number" class="form-control" placeholder="Semester 4 Bahasa Indonesia" name="sm_4_bindo" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -317,7 +317,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Matematika</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 4 Matematik" name="sem4_mtk" required>
+          <input type="number" class="form-control" placeholder="Semester 4 Matematik" name="sm_4_mtk" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -325,7 +325,7 @@
       <div class="form-group">
         <b class="control-label mt-3">IPA</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 4 IPA" name="sem4_ipa" required>
+          <input type="number" class="form-control" placeholder="Semester 4 IPA" name="sm_4_ipa" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -333,7 +333,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Inggris</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 4 Bahasa Inggris" name="sem4_b_ing" required>
+          <input type="number" class="form-control" placeholder="Semester 4 Bahasa Inggris" name="sm_4_bing" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -343,7 +343,7 @@
       <div class="form-group">
         <b class="control-label mt-1">Agama </b>(Jika nilai Agama lebih 1, maka nilai agama di rata-rata terlebih dahulu)
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 5 Agama" name="sem5_agama" required>
+          <input type="number" class="form-control" placeholder="Semester 5 Agama" name="sm_5_agama" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -351,7 +351,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Indonesia</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 5 Bahasa Indonesia" name="sem5_b_indo" required>
+          <input type="number" class="form-control" placeholder="Semester 5 Bahasa Indonesia" name="sm_5_bindo" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -359,7 +359,7 @@
       <div class="form-group">
         <b class="control-label mt-3">Matematika</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 5 Matematik" name="sem5_mtk" required>
+          <input type="number" class="form-control" placeholder="Semester 5 Matematik" name="sm_5_mtk" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
@@ -367,14 +367,14 @@
       <div class="form-group">
         <b class="control-label mt-3">IPA</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 5 IPA" name="sem5_ipa" required>
+          <input type="number" class="form-control" placeholder="Semester 5 IPA" name="sm_5_ipa" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
       <div class="form-group">
         <b class="control-label mt-3">Bahasa Inggris</b>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Semester 5 Bahasa Inggris" name="sem5_b_ing" required>
+          <input type="number" class="form-control" placeholder="Semester 5 Bahasa Inggris" name="sm_5_bing" required>
         </div>
         <p>Nilai Rata-Rata (Pengetahuan + Keterampilan)</p>
       </div>
