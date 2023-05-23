@@ -30,7 +30,7 @@
                 <div class="col-12">
                     <div class="card">  
                         <div class="card-header">
-                            <h4 class="card-title">Jurusan Teknik Komputer Jaringan</h4>
+                            <h4 class="card-title">Semua Jurusan</h4>
                         </div>
                         <div class="card-body">
                             <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
@@ -45,18 +45,23 @@
                                 </thead>
 
                                 <tbody>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($tampil as $row) {
+                                    ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>928384523</td>
-                                        <td>Edinburgh</td>
-                                        <td>SMP UNGGUL SERANG</td>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $row->nisn_siswa ?></td>
+                                        <td><?= $row->nama_siswa ?></td>
+                                        <td><?= $row->asal_sekolah ?></td>
                                         <td>
                                             <a href="#" class="btn btn-warning waves-effect waves-light btn-sm">Reset</a>
                                             <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
-                                            <a href="admin-raport-siswa-detail.php" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
+                                            <a href="<?= site_url('Admin/raport_detail/'. $row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
                                         </td>
                                     </tr>
+                                    <?php } ?>
                                 </tbody>
                                 
                             </table>
