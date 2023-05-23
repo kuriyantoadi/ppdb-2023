@@ -116,7 +116,7 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-checklist"></i>
+                                    <i class="dripicons-blog"></i>
                                     <span data-key="t-apps">Operator Raport</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
@@ -159,7 +159,7 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-checklist"></i>
+                                    <i class="dripicons-document-new"></i>
                                     <span data-key="t-apps">Operator Berkas</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
@@ -202,7 +202,7 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-checklist"></i>
+                                    <i class="dripicons-microphone"></i>
                                     <span data-key="t-apps">Operator Wawancara</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
@@ -245,7 +245,7 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-checklist"></i>
+                                    <i class="dripicons-lightbulb"></i>
                                     <span data-key="t-apps">Operator Akademik</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">

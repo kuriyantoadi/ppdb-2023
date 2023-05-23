@@ -108,7 +108,7 @@
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" data-key="t-menu">Siswa PPDB</li>
                             <li>
-                                <a href="index.php">
+                                <a href="<?= base_url() ?>Siswa/index">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>

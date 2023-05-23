@@ -104,7 +104,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">SKL</h4>
-                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_skl ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
@@ -147,7 +147,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">Raport Semester 1</h4>
-                                            <object data="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_1 ?>" type="application/pdf" width="100%" height="500px">
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_1 ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
@@ -211,7 +211,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">Raport Semester 2</h4>
-                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_2 ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
@@ -275,7 +275,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">Raport Semester 3</h4>
-                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_3 ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
@@ -340,7 +340,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">Raport Semester 4</h4>
-                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_4 ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
@@ -404,7 +404,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h4 class="card-title">Raport Semester 5</h4>
-                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                            <embed type="application/pdf" src="<?= base_url() ?>assets/upload_file/<?= $row->file_raport_5 ?>" width="100%" height="500"></embed>
                                         </div>
                                     </div>
                                     
