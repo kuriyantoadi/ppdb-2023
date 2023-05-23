@@ -36,7 +36,7 @@
     </div>
     <div class="col-8">
 
-    <?= form_open_multipart('Daftar/daftar_up') ?>
+    <?= form_open_multipart('index.php/Daftar/daftar_up') ?>
 
     <form>
 

@@ -85,7 +85,7 @@
                                 <!-- <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profil</a> -->
                                 <!-- <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i>Password</a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?= base_url() ?>Login/siswa_logout"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                                <a class="dropdown-item" href="<?= base_url() ?>index.php/Login/siswa_logout"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                             </div>
                         </div>
                         <!-- user akhir -->
@@ -108,13 +108,13 @@
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" data-key="t-menu">Siswa PPDB</li>
                             <li>
-                                <a href="<?= base_url() ?>Siswa/index">
+                                <a href="<?= base_url() ?>index.php/Siswa/index">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url() ?>Siswa/profil">
+                                <a href="<?= base_url() ?>index.php/Siswa/profil">
                                     <i class="dripicons-user"></i>
                                     <span data-key="t-dashboard">Data Calon Siswa</span>
                                 </a>

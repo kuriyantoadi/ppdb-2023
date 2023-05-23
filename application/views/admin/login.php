@@ -45,7 +45,7 @@
                                         <!-- <form class="custom-form mt-4 pt-2" action="" method=""> -->
            				    		    <br><?= $this->session->flashdata('msg') ?>
 
-                                        <?= form_open('Login/admin_login') ?>
+                                        <?= form_open('index.php/Login/admin_login') ?>
                                             <div class="mb-3">
                                                 <label class="form-label" for="nisn">Username</label>
                                                 <input type="text" class="form-control" id="nisn" placeholder="Masukan Username" name="username" value="">

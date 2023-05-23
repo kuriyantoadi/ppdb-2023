@@ -30,10 +30,10 @@ class Login extends CI_Controller {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
-        redirect('Siswa/index');
+        redirect('index.php/Siswa/index');
 
       }else {
-        $url = site_url('Login/index');
+        $url = site_url('index.php/Login/index');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -45,7 +45,7 @@ class Login extends CI_Controller {
       }
 
       // $url = site_url('index.php/C_login/siswa_tekno');
-      $url = site_url('Login/index');
+      $url = site_url('index.php/Login/index');
       echo $this->session->set_flashdata('msg', '
 
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -55,7 +55,7 @@ class Login extends CI_Controller {
       redirect($url);
     }
 
-    $url = site_url('Login/index');
+    $url = site_url('index.php/Login/index');
       echo $this->session->set_flashdata('msg', '
 
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -88,17 +88,17 @@ class Login extends CI_Controller {
         $this->session->set_userdata('xeimaiPh9ahs4ie', true);
         $this->session->set_userdata('ses_id', $data['id_user']);
         $this->session->set_userdata('ses_user', $data['username']);
-        redirect('Admin/index');
+        redirect('index.php/Admin/index');
 
       }else {
-        // $url = base_url('Login/fa');
+        $url = base_url('index.php/Login/fa');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
           Username atau Password Salah<br> Silahkan Login Kembali
         </div>
         ');
-        // redirect($url);
+        redirect($url);
       }
 
     }
@@ -108,7 +108,7 @@ class Login extends CI_Controller {
       Username atau Password Salah<br> Silahkan Login Kembali
     </div>
     ');
-      $url = base_url('Login/fa');
+      $url = base_url('index.php/Login/fa');
       // redirect($url);
   }
 
@@ -121,7 +121,7 @@ class Login extends CI_Controller {
     </div>
     ');
     $url = base_url();
-    redirect('Login');
+    redirect('index.php/Login');
   }
 
   public function admin_logout()

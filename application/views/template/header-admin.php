@@ -109,7 +109,7 @@
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" data-key="t-menu">Admin PPDB</li>
                             <li>
-                                <a href="<?= base_url() ?>Admin">
+                                <a href="<?= base_url() ?>index.php/Admin">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
@@ -121,7 +121,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
-                                        <a href="<?= base_url() ?>Admin/raport_siswa">
+                                        <a href="<?= base_url() ?>index.php/Admin/raport_siswa">
                                             <span data-key="">Semua</span>
                                         </a>
                                     </li>

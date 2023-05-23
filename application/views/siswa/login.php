@@ -45,7 +45,7 @@
                                         <!-- <form class="custom-form mt-4 pt-2" action="" method=""> -->
            				    		    <br><?= $this->session->flashdata('msg') ?>
 
-                                        <?= form_open('Login/login_siswa') ?>
+                                        <?= form_open('index.php/Login/login_siswa') ?>
                                             <div class="mb-3">
                                                 <label class="form-label" for="nisn">NISN</label>
                                                 <input type="text" class="form-control" id="nisn" placeholder="Masukan NISN" name="nisn_siswa" value="">
@@ -81,7 +81,7 @@
                                         <!-- </form> -->
 
                                         <div class="mt-3 text-center">
-                                            <p class="text-muted mb-0">Saya belum mendaftar ? <a href="<?= base_url() ?>Daftar" class="text-primary fw-semibold"> Segera Daftar </a> </p>
+                                            <p class="text-muted mb-0">Saya belum mendaftar ? <a href="<?= base_url() ?>index.php/Daftar" class="text-primary fw-semibold"> Segera Daftar </a> </p>
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">
