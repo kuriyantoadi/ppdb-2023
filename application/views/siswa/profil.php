@@ -91,7 +91,50 @@
             </div>
             <!-- end row data siswa-->
 
-            <!-- end row raport-->
+            <!-- SKL Awal-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="mb-sm-0 font-size-18">Surat Keterangan Kelulusan/Ijazah SMP</h4>
+                        </div>                                  
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">SKL</h4>
+                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#" class="btn btn-primary waves-effect waves-light btn-sm">Edit Nilai Raport</a> -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- SKL Akhir-->
+
+
+
+            <!-- start row raport-->
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -154,6 +197,265 @@
                 </div> <!-- end col -->
             </div>
             <!-- end row raport-->
+
+            <!-- start row raport-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="mb-sm-0 font-size-18">Raport Semester 2</h4>
+                        </div>                                  
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">Raport Semester 2</h4>
+                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered border-1 table-sm">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Agama</th>
+                                                                    <td><?= $row->sm_2_agama ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Matematika</th>
+                                                                    <td><?= $row->sm_2_mtk ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Bahasa Indonesia</th>
+                                                                    <td><?= $row->sm_2_bindo ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>IPA</th>
+                                                                    <td><?= $row->sm_2_ipa ?></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <th>Bahasa Inggris</th>
+                                                                    <td><?= $row->sm_2_bing ?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#" class="btn btn-primary waves-effect waves-light btn-sm">Edit Nilai Raport</a> -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row raport-->
+
+            <!-- start row raport-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="mb-sm-0 font-size-18">Raport Semester 3</h4>
+                        </div>                                  
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">Raport Semester 3</h4>
+                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered border-1 table-sm">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Agama</th>
+                                                                    <td><?= $row->sm_3_agama ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Matematika</th>
+                                                                    <td><?= $row->sm_3_mtk ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Bahasa Indonesia</th>
+                                                                    <td><?= $row->sm_3_bindo ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>IPA</th>
+                                                                    <td><?= $row->sm_3_ipa ?></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <th>Bahasa Inggris</th>
+                                                                    <td><?= $row->sm_3_bing ?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#" class="btn btn-primary waves-effect waves-light btn-sm">Edit Nilai Raport</a> -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row raport-->
+
+
+            <!-- start row raport-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="mb-sm-0 font-size-18">Raport Semester 4</h4>
+                        </div>                                  
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">Raport Semester 4</h4>
+                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered border-1 table-sm">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Agama</th>
+                                                                    <td><?= $row->sm_4_agama ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Matematika</th>
+                                                                    <td><?= $row->sm_4_mtk ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Bahasa Indonesia</th>
+                                                                    <td><?= $row->sm_4_bindo ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>IPA</th>
+                                                                    <td><?= $row->sm_4_ipa ?></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <th>Bahasa Inggris</th>
+                                                                    <td><?= $row->sm_4_bing ?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#" class="btn btn-primary waves-effect waves-light btn-sm">Edit Nilai Raport</a> -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row raport-->
+
+            <!-- start row raport-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="mb-sm-0 font-size-18">Raport Semester 5</h4>
+                        </div>                                  
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">Raport Semester 5</h4>
+                                            <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered border-1 table-sm">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Agama</th>
+                                                                    <td><?= $row->sm_5_agama ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Matematika</th>
+                                                                    <td><?= $row->sm_5_mtk ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Bahasa Indonesia</th>
+                                                                    <td><?= $row->sm_5_bindo ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>IPA</th>
+                                                                    <td><?= $row->sm_5_ipa ?></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <th>Bahasa Inggris</th>
+                                                                    <td><?= $row->sm_5_bing ?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#" class="btn btn-primary waves-effect waves-light btn-sm">Edit Nilai Raport</a> -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row raport-->
+
+            
 
         </div> <!-- container-fluid -->
     </div>

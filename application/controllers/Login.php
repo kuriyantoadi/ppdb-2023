@@ -166,36 +166,13 @@ class Login extends CI_Controller {
   public function siswa_logout()
   {
     $this->session->sess_destroy();
-    $url = base_url();
-    redirect('C_siswa');
-  }
-
-  public function logout_bismen()
-  {
-    $this->session->sess_destroy();
-    $url = base_url();
-
-     $this->session->set_flashdata('msg', '
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      Terimakasih, Anda sudah Logout.
-    </div>
-    ');
-    
-    redirect('C_login/siswa_bismen');
-  }
-
-  public function logout_tekno()
-  {
-    $this->session->sess_destroy();
-    $url = base_url();
-
     $this->session->set_flashdata('msg', '
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      Terimakasih, Anda sudah Logout.
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      Anda Berhasil Logout dari Sistem PPDB
     </div>
     ');
-
-    redirect('C_login/siswa_tekno');
+    $url = base_url();
+    redirect('Login');
   }
 
   public function admin_logout()
