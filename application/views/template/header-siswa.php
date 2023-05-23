@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="<?= base_url() ?>assets/images/favicon.ico">
 
         <!-- preloader css -->
-        <link rel="stylesheet" href="assets/css/preloader.min.css" type="text/css" />
+        <link rel="stylesheet" href="<?= base_url() ?>assets/css/preloader.min.css" type="text/css" />
         <!-- Bootstrap Css -->
         <link href="<?= base_url() ?>assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -66,8 +66,7 @@
                     </div>
 
                     <div class="d-flex">
-
-                        <div class="dropdown d-none d-sm-inline-block">
+                         <div class="dropdown d-none d-sm-inline-block">
                             <button type="button" class="btn header-item" id="mode-setting-btn">
                                 <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
                                 <i data-feather="sun" class="icon-lg layout-mode-light"></i>
@@ -83,8 +82,8 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profil</a>
-                                <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i>Password</a>
+                                <!-- <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profil</a> -->
+                                <!-- <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i>Password</a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url() ?>Login/siswa_logout"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                             </div>
