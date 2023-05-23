@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php echo $lang ?>">
+<html lang="en">
 
     <head>
         <title>PPDB SMKN 1 Kragilan</title>
@@ -78,15 +78,15 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?= base_url() ?>assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Operator</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Administrator</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> <?php echo $language["Profile"]; ?></a>
-                                <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i> <?php echo $language["Lock_screen"]; ?> </a>
+                                <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profil</a>
+                                <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i>Password</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="logout.php"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> <?php echo $language["Logout"]; ?></a>
+                                <a class="dropdown-item" href="logout.php"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                             </div>
                         </div>
                         <!-- user akhir -->
@@ -108,15 +108,14 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title" data-key="t-menu"><?php echo $language["Menu"]; ?></li>
+                            <li class="menu-title" data-key="t-menu">Admin PPDB</li>
 
                             <li>
                                 <a href="index.php">
                                     <i class="dripicons-home"></i>
-                                    <span data-key="t-dashboard"><?php echo $language["Dashboard"]; ?></span>
+                                    <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i class="dripicons-checklist"></i>
@@ -125,17 +124,100 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li>
                                         <a href="op-raport-siswa.php">
-                                            <span data-key="t-calendar">Teknik Komputer Jaringan</span>
+                                            <span data-key="">Teknik Komputer Jaringan</span>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href="apps-chat.php">
-                                            <span data-key="t-chat">Akuntamsi</span>
+                                            <span data-key="">Akuntamsi</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Raport</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Berkas</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Wawancara</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i class="dripicons-checklist"></i>
+                                    <span data-key="t-apps">Operator Akademik</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li>
+                                        <a href="op-raport-siswa.php">
+                                            <span data-key="">Teknik Komputer Jaringan</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apps-chat.php">
+                                            <span data-key="">Akuntamsi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="dripicons-user"></i>
+                                    <span data-key="">User Operator PPDB</span>
+                                </a>
+                            </li>
+
                         </ul>
                         <!-- Left Menu End -->
 

@@ -58,7 +58,12 @@
                                                     </div>
                                                     <div class="flex-shrink-0">
                                                         <div class="">
-                                                            <a href="#" class="text-muted">Lupa Sandi?</a>
+                                                            <a href="" onclick="lupasandi()" class="text-muted">Lupa Sandi?</a>
+                                                            <script>
+                                                            function lupasandi() {
+                                                            alert("Password didapatkan ketika proses pendaftaran selesai dilakukan atau hubungi admin di live chat");
+                                                            }
+                                                            </script>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -76,7 +81,7 @@
                                         <!-- </form> -->
 
                                         <div class="mt-3 text-center">
-                                            <p class="text-muted mb-0">Tidak ada Akun? <a href="auth-register.php" class="text-primary fw-semibold"> Segera Daftar </a> </p>
+                                            <p class="text-muted mb-0">Saya belum mendaftar ? <a href="<?= base_url() ?>Daftar" class="text-primary fw-semibold"> Segera Daftar </a> </p>
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">
