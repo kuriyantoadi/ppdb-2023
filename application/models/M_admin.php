@@ -13,6 +13,11 @@ class M_admin extends CI_Model{
     return $tampil;
   }
 
+  public function raport_hapus($id_siswa)
+  {
+    $this->db->where($id_siswa);
+    $this->db->delete('tb_siswa');
+  }
   
 
 // kelas akhir

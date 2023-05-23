@@ -50,6 +50,20 @@ public function index()
     $this->load->view('template/footer-admin');
   }
 
+  public function raport_hapus($id_siswa)
+  {
+    $id_siswa = array('id_siswa' => $id_siswa);
 
+    $success = $this->M_admin->raport_hapus($id_siswa);
+    $this->session->set_flashdata('msg', '
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Hapus Siswa Berhasil</strong>
 
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>');
+    redirect('index.php/Admin/raport_siswa');
+
+  }
 }

@@ -56,9 +56,10 @@
                                         <td><?= $row->asal_sekolah ?></td>
                                         <td>
                                             <a href="#" class="btn btn-warning waves-effect waves-light btn-sm">Reset</a>
-                                            <a href="admin-raport-siswa-edit.php" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
-                                            <a href="#" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
-                                            <a href="<?= site_url('Admin/raport_detail/'. $row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
+                                            <a href="<?= site_url('index.php/Admin/raport_hapus/'. $row->id_siswa) ?>" class="btn btn-danger waves-effect waves-light btn-sm"
+                                            onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')">Hapus</a>
+                                            <a href="<?= site_url('index.php/Admin/raport_edit/'. $row->id_siswa) ?>" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
+                                            <a href="<?= site_url('index.php/Admin/raport_detail/'. $row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
                                         </td>
                                     </tr>
                                     <?php } ?>
