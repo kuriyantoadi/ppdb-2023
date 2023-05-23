@@ -2,15 +2,15 @@
 
 class M_siswa extends CI_Model{
 
-  function dashboard_tekno($ses_id){
+  function profil($ses_id){
     $this->db->where('id_siswa', $ses_id);
-    $hasil = $this->db->get('tb_siswa_tekno')->result();
+    $hasil = $this->db->get('tb_siswa')->result();
     return $hasil;
   }
 
-  function dashboard_bismen($ses_id){
-    $this->db->where('id_siswa', $ses_id);
-    $hasil = $this->db->get('tb_siswa_bismen')->result();
+  function timeline(){
+    // $this->db->where('MOD(id_timeline ,2)');
+    $hasil = $this->db->get('tb_timeline')->result();
     return $hasil;
   }
 
