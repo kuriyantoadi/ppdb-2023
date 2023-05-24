@@ -7,6 +7,12 @@ class M_daftar extends CI_Model{
     $this->db->insert('tb_siswa', $data_tambah);
   }
 
+  public function kompetensi_keahlian()
+  {
+    $tampil = $this->db->get('tb_kompetensi_keahlian')->result();
+    return $tampil;
+  }
+
 
 }
 

@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
 	{
 			parent::__construct();
 			$this->load->model('M_admin');
-      // $this->load->model('M_siswa');
+      $this->load->model('M_daftar');
 
       // session login
 			if ($this->session->userdata('xeimaiPh9ahs4ie') != true) {
@@ -66,4 +66,17 @@ public function index()
     redirect('index.php/Admin/raport_siswa');
 
   }
+
+  public function raport_edit($id_siswa)
+    {
+        $id_siswa = array('id_siswa' => $id_siswa);
+        $data['tampil'] = $this->M_admin->raport_siswa($id_siswa );
+        $data['tampil_kompetensi'] = $this->M_daftar->kompetensi_keahlian();
+
+        $this->load->view('template/header-admin');
+        $this->load->view('admin/raport_edit', $data);
+        $this->load->view('template/footer-admin');
+    }
+
+  
 }

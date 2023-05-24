@@ -37,28 +37,61 @@
                         <div class="card-body p-4">
 
                             <div class="row">
+
+                            <?php foreach ($tampil as $row) { ?>
+                              <?= form_open('Admin/raport_edit_up') ?>
+
                                 <form action="" method="post"> 
+                                    
                                     <div class="col-lg-6">
                                         <div>
                                             <div class="mb-3">
+                                                <label for="nisn" class="form-label">Kompetensi Keahlian</label>
+                                                <input type="hidden" name="id_siswa" value>
+                                                <select name="kompetensi_keahlian" id="" class="form-control">
+                                                    <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Awal - <?= $row->kompetensi_keahlian ?></option>
+                                                
+                                                    <?php foreach ($tampil_kompetensi as $row1) { ?>
+                                                    <option value="<?= $row1->nama_kompetensi ?>"><?= $row1->nama_kompetensi ?></option>
+                                                    <?php } ?>
+
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="nisn" class="form-label">Kompetensi Keahlian 2</label>
+                                                <select name="kompetensi_keahlian_2" id="" class="form-control">
+                                                    <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Awal - <?= $row->kompetensi_keahlian ?></option>
+                                                
+                                                    <?php foreach ($tampil_kompetensi as $row1) { ?>
+                                                    <option value="<?= $row1->nama_kompetensi ?>"><?= $row1->nama_kompetensi ?></option>
+                                                    <?php } ?>
+
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
                                                 <label for="nisn" class="form-label">NISN</label>
-                                                <input class="form-control" type="number" name="nisn" value="" id="nisn">
+                                                <input type="hidden" name="id_siswa" value>
+                                                <input class="form-control" type="number" name="nisn_siswa" value="<?= $row->nisn_siswa ?>" id="nisn">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Lengkap</label>
-                                                <input class="form-control" type="text" name="nama" value="Artisanal kale" id="nama">
+                                                <input class="form-control" type="text" name="nama_siswa" value="<?= $row->nama_siswa ?>" id="nama">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="ttl" class="form-label">Tempat, Tanggal Lahir</label>
-                                                <input class="form-control" type="text" name="ttl" value="Artisanal kale" id="ttl">
+                                                <label for="ttl" class="form-label">Tempat Lahir</label>
+                                                <input class="form-control" type="text" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" id="ttl">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="ttl" class="form-label">Tanggal Lahir</label>
+                                                <input class="form-control" type="text" name="tgl_lahir" value="Artisanal kale" id="ttl">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="asalsekolah" class="form-label">Asal Sekolah</label>
-                                                <input class="form-control" type="text" name="asalsekolah" value="Artisanal kale" id="asalsekolah">
+                                                <input class="form-control" type="text" name="asal_sekolah" value="Artisanal kale" id="asalsekolah">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="ortuwali" class="form-label">Orangtua/Wali</label>
-                                                <input class="form-control" type="text" name="ortuwali" value="Artisanal kale" id="ortuwali">
+                                                <input class="form-control" type="text" name="" value="Artisanal kale" id="ortuwali">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="telepon" class="form-label">No Telepon</label>
@@ -81,7 +114,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                <?php } ?>
+                                </form>                          
                             </div>
                         </div>
                     </div>
