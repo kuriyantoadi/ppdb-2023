@@ -40,7 +40,7 @@
                                         <th>NISN</th>
                                         <th>NAMA LENGKAP</th>
                                         <th>ASAL SEKOLAH</th>
-                                        <th>AKSI</th>
+                                        <th><center>AKSI</th>
                                     </tr>
                                 </thead>
 
@@ -54,12 +54,13 @@
                                         <td><?= $row->nisn_siswa ?></td>
                                         <td><?= $row->nama_siswa ?></td>
                                         <td><?= $row->asal_sekolah ?></td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning waves-effect waves-light btn-sm">Reset</a>
+                                        <td><center>
+                                            <a href="#" class="btn btn-warning waves-effect waves-light btn-sm"><i class="dripicons-warning" title="Reset"
+                                            onclick="return confirm('Anda yakin Reset data siswa yang menghapus sebagian data siswa <?= $row->nama_siswa ?> ?')"></i></a>
                                             <a href="<?= site_url('index.php/Admin/raport_hapus/'. $row->id_siswa) ?>" class="btn btn-danger waves-effect waves-light btn-sm"
-                                            onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')">Hapus</a>
-                                            <a href="<?= site_url('index.php/Admin/raport_edit/'. $row->id_siswa) ?>" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
-                                            <a href="<?= site_url('index.php/Admin/raport_detail/'. $row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Lihat</a>
+                                            onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')"><i class="dripicons-cross" title="Hapus"></i></a>
+                                            <a href="<?= site_url('index.php/Admin/raport_edit/'. $row->id_siswa) ?>" class="btn btn-primary waves-effect waves-light btn-sm" title="Edit"><i class="dripicons-pencil"></i></a>
+                                            <a href="<?= site_url('index.php/Admin/raport_detail/'. $row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light" title="Lihat"><i class="dripicons-preview"></i></a>
                                         </td>
                                     </tr>
                                     <?php } ?>

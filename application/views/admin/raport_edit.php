@@ -29,17 +29,19 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        <?php foreach ($tampil as $row) { ?>
+
                         <div class="card-header">
-                            <a href="admin-raport-siswa.php" class="btn btn-dark waves-effect waves-light">Kembali</a>
-                            <a href="admin-raport-siswa-edit.php" class="btn btn-danger waves-effect waves-light">Reset</a>
-                            <a href="admin-raport-siswa-detail.php" class="btn btn-info waves-effect waves-light">Lihat</a>
+                            <a href="<?= base_url() ?>index.php/Admin/raport_siswa" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                            <a href="<?= site_url('index.php/Admin/raport_reset/'.$row->id_siswa) ?>" class="btn btn-danger waves-effect waves-light btn-sm"
+                            onclick="return confirm('Anda yakin Reset data siswa yang menghapus sebagian data siswa <?= $row->nama_siswa ?> ?')">Reset</a>
+                            <a href="<?= site_url('index.php/Admin/raport_detail/'.$row->id_siswa) ?>" class="btn btn-info waves-effect waves-light btn-sm">Lihat</a>
                         </div>
                         <div class="card-body p-4">
 
                             <div class="row">
 
-                            <?php foreach ($tampil as $row) { ?>
-                              <?= form_open('Admin/raport_edit_up') ?>
+                              <?= form_open('index.php/Admin/raport_edit_up') ?>
 
                                 <form action="" method="post"> 
                                     
@@ -47,8 +49,7 @@
                                         <div>
                                             <div class="mb-3">
                                                 <label for="nisn" class="form-label">Kompetensi Keahlian</label>
-                                                <input type="hidden" name="id_siswa" value>
-                                                <select name="kompetensi_keahlian" id="" class="form-control">
+                                                <select name="kompetensi_keahlian" id="" class="form-control" required>
                                                     <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Awal - <?= $row->kompetensi_keahlian ?></option>
                                                 
                                                     <?php foreach ($tampil_kompetensi as $row1) { ?>
@@ -59,7 +60,7 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nisn" class="form-label">Kompetensi Keahlian 2</label>
-                                                <select name="kompetensi_keahlian_2" id="" class="form-control">
+                                                <select name="kompetensi_keahlian_2" id="" class="form-control" required>
                                                     <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Awal - <?= $row->kompetensi_keahlian ?></option>
                                                 
                                                     <?php foreach ($tampil_kompetensi as $row1) { ?>
@@ -70,46 +71,60 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nisn" class="form-label">NISN</label>
-                                                <input type="hidden" name="id_siswa" value>
-                                                <input class="form-control" type="number" name="nisn_siswa" value="<?= $row->nisn_siswa ?>" id="nisn">
+                                                <input type="hidden" name="id_siswa" value="<?= $row->id_siswa ?>" required>
+                                                <input class="form-control" type="number" name="nisn_siswa" value="<?= $row->nisn_siswa ?>" id="nisn" required>
+                                            </div>       
+                                            <div class="mb-3">
+                                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                                <input class="form-control" type="text" name="nama_siswa" value="<?= $row->nama_siswa ?>" id="nama" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Lengkap</label>
-                                                <input class="form-control" type="text" name="nama_siswa" value="<?= $row->nama_siswa ?>" id="nama">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="ttl" class="form-label">Tempat Lahir</label>
-                                                <input class="form-control" type="text" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" id="ttl">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="ttl" class="form-label">Tanggal Lahir</label>
-                                                <input class="form-control" type="text" name="tgl_lahir" value="Artisanal kale" id="ttl">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="asalsekolah" class="form-label">Asal Sekolah</label>
-                                                <input class="form-control" type="text" name="asal_sekolah" value="Artisanal kale" id="asalsekolah">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="ortuwali" class="form-label">Orangtua/Wali</label>
-                                                <input class="form-control" type="text" name="" value="Artisanal kale" id="ortuwali">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="telepon" class="form-label">No Telepon</label>
-                                                <input class="form-control" type="number" name="telepon" value="" id="telepon">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Jurusan</label>
-                                                <select class="form-select">
-                                                    <option value="">Select</option>
-                                                    <option value="">Large select</option>
-                                                    <option value="">Small select</option>
+                                                <select name="jenis_kelamin" class="form-control" required>
+                                                    <option value="<?= $row->jenis_kelamin ?>">Pilihan Awal - <?= $row->jenis_kelamin ?></option>
+                                                    <option value="Laki-laki">Laki-laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="password" class="form-label">Password</label>
-                                                <input class="form-control" type="password" value="hunter2" id="password">
+                                                <label for="ttl" class="form-label">Tempat Lahir</label>
+                                                <input class="form-control" type="text" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" id="ttl" required>
                                             </div>
-                                            <div class="mt-4">
+                                            <div class="mb-3">
+                                                <label for="ttl" class="form-label">Tanggal Lahir</label>
+                                                <input type="text" class="form-control" id="datepicker-basic" name="tgl_lahir" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="asalsekolah" class="form-label">Alamat</label>
+                                                <input class="form-control" type="text" name="alamat" value="<?= $row->alamat ?>" id="asalsekolah" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="asalsekolah" class="form-label">Asal Sekolah</label>
+                                                <input class="form-control" type="text" name="asal_sekolah" value="<?= $row->asal_sekolah ?>" id="asalsekolah" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="asalsekolah" class="form-label">Tahun Lulus</label>
+                                                <select name="tahun_lulus" class="form-control" id="" required>
+                                                    <option value="<?= $row->tahun_lulus ?>">Pilihan Awal - <?= $row->tahun_lulus ?></option>
+                                                    <?php for ($x = 2015; $x <= 2023; $x++) { ?>
+                                                    <option value="<?= $x ?>"><?= $x ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+
+                                             <div class="mb-3">
+                                                <label for="telepon" class="form-label">No Telepon</label>
+                                                <input class="form-control" type="number" name="no_wa_siswa" value="<?= $row->no_wa_siswa ?>" id="telepon" required>
+                                            </div> 
+                                            <div class="mb-3">
+                                                <label for="ortuwali" class="form-label">Orang Tua/Wali</label>
+                                                <input class="form-control" type="text" name="nama_org_tua" value="<?= $row->nama_org_tua ?>" id="ortuwali" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="telepon" class="form-label">No Hp Orang Tua</label>
+                                                <input class="form-control" type="number" name="no_wa_org_tua" value="<?= $row->no_wa_org_tua ?>" id="telepon" required>
+                                            </div>           
+                                            <div class="mt-4"><center>
                                                 <button type="submit" class="btn btn-primary w-md">simpan</button>
                                             </div>
                                         </div>
@@ -126,6 +141,3 @@
         </div> <!-- container-fluid -->
     </div>
     <!-- End Page-content -->
-
-
-    <!-- <?php include 'admin-layouts/footer.php'; ?> -->

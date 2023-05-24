@@ -168,7 +168,7 @@
       </div>
       <div class="form-group">
         <label class="control-label mt-3" for="email">Nomor Hp Orang Tua/Wali :</label>
-        <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_wa_org_tua" required>
+        <input type="number" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_wa_org_tua" required>
       </div>
 
       <!-- Nilai Raport Awal -->

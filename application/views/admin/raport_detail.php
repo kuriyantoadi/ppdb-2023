@@ -43,6 +43,14 @@
                                             <tbody>
                                                 <?php foreach ($tampil as $row) { ?>
                                                 <tr>
+                                                    <td colspan="2">
+                                                        <a href="<?= base_url() ?>index.php/Admin/raport_siswa" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                                                        <a href="<?= site_url('index.php/Admin/raport_reset/'.$row->id_siswa) ?>" class="btn btn-danger waves-effect waves-light btn-sm"
+                                                          onclick="return confirm('Anda yakin Reset data siswa yang menghapus sebagian data siswa <?= $row->nama_siswa ?> ?')">Reset</a>
+                                                        <a href="<?= site_url('index.php/Admin/raport_edit/'.$row->id_siswa) ?>" class="btn btn-primary waves-effect waves-light btn-sm">Edit</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <th>Kompetensi Keahlian 1</th>
                                                     <td><?= $row->kompetensi_keahlian ?></td>
                                                 </tr>
@@ -55,7 +63,7 @@
                                                     <td><?= $row->nisn_siswa ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>NAMA LENGKAP</th>
+                                                    <th>Nama Lengkap</th>
                                                     <td><?= $row->nama_siswa ?></td>
                                                 </tr>
                                                 <tr>
@@ -71,7 +79,7 @@
                                                     <td><?= $row->asal_sekolah ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Orag Tua / Wali</th>
+                                                    <th>Orang Tua / Wali</th>
                                                     <td><?= $row->nama_org_tua ?></td>
                                                 </tr>
                                                 <tr>

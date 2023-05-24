@@ -18,6 +18,13 @@ class M_admin extends CI_Model{
     $this->db->where($id_siswa);
     $this->db->delete('tb_siswa');
   }
+
+  public function raport_edit_up($data_edit, $id_siswa)
+  {
+    $this->db->where('id_siswa', $id_siswa);
+    $this->db->update('tb_siswa', $data_edit);
+  }
+
   
 
 // kelas akhir
