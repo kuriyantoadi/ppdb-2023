@@ -36,7 +36,7 @@
                                 <h4 class="text-uppercase">A. identitas calon peserta didik</h4>
                                 <div class="form-group">
                                     <label for="tgl_pendaftaran" class="form-label">Tanggal Pendaftaran</label>
-                                    <input class="form-control " type="text" name="tgl_pendaftaran" value="<?= date('Y-m-d') ?>" id="tgl_pendaftaran" required readonly>
+                                    <input class="form-control " type="date" name="tgl_pendaftaran" value="<?= date('Y-m-d') ?>" id="tgl_pendaftaran" required readonly>
                                 </div>
                                 <div class="form-group mt-3">
                                     <label class="control-label" for="email">Kompetensi Keahlian :</label>
