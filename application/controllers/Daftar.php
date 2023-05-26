@@ -8,14 +8,16 @@ class Daftar extends CI_Controller
   {
     parent::__construct();
     $this->load->model('M_daftar');
-    $this->load->model('M_siswa');
+    // $this->load->model('M_');
   }
 
   //Login User
   public function index()
   {
+    $data['tampil'] = $this->M_daftar->kompetensi_keahlian();
+
     $this->load->view('template/header-daftar.php');
-    $this->load->view('siswa/siswa-daftar');
+    $this->load->view('siswa/siswa-daftar', $data);
     $this->load->view('template/footer-daftar.php');
   }
 
@@ -33,8 +35,6 @@ class Daftar extends CI_Controller
     $this->form_validation->set_rules('jenis_kelamin','jenis_kelamin', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('tempat_lahir','Tempat_lahir', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('tgl_lahir','Tgl_lahir', 'trim|required');
-    $this->form_validation->set_rules('bln_lahir','Bln_lahir', 'trim|required');
-    $this->form_validation->set_rules('thn_lahir','Thn_lahir', 'trim|required');
     $this->form_validation->set_rules('tahun_lulus','Tahun_lulus', 'trim|required|min_length[3]');
 
     $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
@@ -72,6 +72,10 @@ class Daftar extends CI_Controller
     $this->form_validation->set_rules('sm_5_bing','Sm_5_bing', 'trim|required');
 
     if ($this->form_validation->run() == FALSE) {
+      echo 'upload error';    
+      echo validation_errors();
+      exit ();
+
       // $url = site_url('Daftar/index');
       // echo $this->session->set_flashdata('msg', '
 
@@ -80,9 +84,6 @@ class Daftar extends CI_Controller
       //   </div>
       //   ');
       // redirect($url);
-
-    echo 'test';    
-
 
     } else {
 

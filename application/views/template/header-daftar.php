@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php echo $lang ?>">
+<html lang="en">
     <head>
         <title>PPDB SMKN 1 Kragilan</title>
         <meta charset="utf-8"/>
@@ -21,4 +21,13 @@
 
     </head>
 
+
+    <script type="text/javascript">
+	$(function(){
+	  $("#tgl_lahir").tgl_lahir({
+		 changeMonth : true,
+        changeYear : true
+	  });
+	});
+    </script>
     <body>
