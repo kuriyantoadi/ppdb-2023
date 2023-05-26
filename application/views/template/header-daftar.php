@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang ?>">
+    <head>
+        <title>PPDB SMKN 1 Kragilan</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+        <meta content="Themesbrand" name="author"/>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="<?= base_url() ?>assets/images/favicon.ico">
 
-<head>
-  <title>Form Pendaftaran</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <!-- Include library Bootstrap Datepicker -->
-  <link href="<?= base_url() ?>assets/datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <!-- preloader css -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/css/preloader.min.css" type="text/css" />
 
-</head>
+        <!-- Bootstrap Css -->
+        <link href="<?= base_url() ?>assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="<?= base_url() ?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="<?= base_url() ?>assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-<body>
+    </head>
+
+    <body>
