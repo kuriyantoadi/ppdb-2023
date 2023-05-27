@@ -33,7 +33,7 @@
                                     <div class="mb-4 text-center">
                                         <a href="index.php" class="d-block auth-logo">
                                             <img src="<?= base_url() ?>assets/images/logo-smkn1.png" alt="" height="100"> 
-                                            <br><span class="logo-txt">PPDB SMKN 1 Kragilan</span>
+                                            <br><span class="logo-txt">PPDB SMKN 1 Kragilan()</span>
                                         </a>
                                     </div>
                                     <div class="auth-content my-auto">
