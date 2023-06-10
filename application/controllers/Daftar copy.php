@@ -14,7 +14,7 @@ class Daftar extends CI_Controller
   //Login User
   public function index()
   {
-    // $data['tampil'] = $this->M_daftar->kompetensi_keahlian();
+    $data['tampil'] = $this->M_daftar->kompetensi_keahlian();
 
     $this->load->view('template/header-daftar.php');
     $this->load->view('siswa/siswa-daftar', $data);
