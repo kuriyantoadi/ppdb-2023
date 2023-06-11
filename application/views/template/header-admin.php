@@ -115,47 +115,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-blog"></i>
-                                    <span data-key="t-apps">Operator Raport</span>
+                                <a href="<?= base_url() ?>index.php/Admin/op_val">
+                                    <i class="dripicons-user"></i>
+                                    <span data-key="">Operator Validasi</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="<?= base_url() ?>index.php/Admin/raport_siswa">
-                                            <span data-key="">Semua</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKJ</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">RPL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">AKL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OTKP</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TPM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKR</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">

@@ -11,7 +11,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">  
-                        
                         <div class="card-header">
                             <h4 class="card-title">Dashboard Siswa Mendaftar</h4>
                         </div>
