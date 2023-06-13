@@ -51,7 +51,7 @@
               <th><center>Nama Lengkap</th>
               <th><center>Kompetensi Keahlian</th>
               <th><center>Asal Sekolah</th>
-              <th><center>Validasi</th>
+              <th><center>Verifikasi</th>
               <th><center>Seleksi Administrasi</th>
 
           </tr>
@@ -65,12 +65,12 @@
           <tr>
               <td><center><?= $no++ ?></td>
               <td><?= $row->nama_siswa ?></td>
-              <td><center><?= $row->kompetensi_keahlian ?></td>
+              <td><center><?= $row->nama_kompetensi_1 ?></td>
               <td><center><?= $row->asal_sekolah ?></td>
               <td><center>
-              <?php if($row->status_validasi == 'Sesuai' ){ ?>
+              <?php if($row->status_verifikasi == 'Sesuai' ){ ?>
                   <a class="btn-success waves-effect waves-light btn-sm">Sesuai</a>
-                <?php }elseif($row->status_validasi == 'Data Tidak Sesuai'){ ?>
+                <?php }elseif($row->status_verifikasi == 'Data Tidak Sesuai'){ ?>
                   <a class="btn-danger waves-effect waves-light btn-sm">Data Tidak Sesuai</a>
                 <?php }else{ ?>
                   <a class="btn-secondary waves-effect waves-light btn-sm">Belum Ada Keterangan</a>

@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
     $this->load->view('template/footer-admin');
   }
 
-  public function op_val()
+  public function val_semua()
   {
     $data['tampil'] = $this->M_pendaftar->validasi_data();
 
@@ -33,5 +33,69 @@ class Admin extends CI_Controller {
     $this->load->view('template/footer-admin');
   }
 
+  public function val_pplg()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_pplg();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+
+  public function val_tjkt()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_tjkt();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+
+  public function val_akl()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_akl();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+
+  public function val_mplb()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_mplb();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+  
+  public function val_tm()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_tm();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+
+  public function val_to()
+  {
+    $data['tampil'] = $this->M_pendaftar->val_to();
+
+    $this->load->view('template/header-admin');
+    $this->load->view('admin/op_val', $data);
+    $this->load->view('template/footer-admin');
+  }
+
+  // public function val_to()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->val_to();
+
+  //   $this->load->view('template/header-admin');
+  //   $this->load->view('admin/siswa_tambah', $data);
+  //   $this->load->view('template/footer-admin');
+  // }
+  
+  
  
 }

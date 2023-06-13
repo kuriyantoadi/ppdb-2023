@@ -24,18 +24,15 @@
                         <div class="card-body">
 
                         <div class="row g-4 mb-2">
-
                             <div class="col-md-6 ">
-                               <a href="<?= site_url('index.php/Admin/siswa_tambah') ?>" type="button" class="btn btn-info btn-sm mb-1">Tambah</a>
-                                <br>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= site_url('index.php/Admin/val_semua') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
-                                    <a href="<?= site_url('index.php/Admin/val_akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
-                                    <a href="<?= site_url('index.php/Admin/val_mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
-                                    <a href="<?= site_url('index.php/Admin/val_tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
-                                    <a href="<?= site_url('index.php/Admin/val_pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
-                                    <a href="<?= site_url('index.php/Admin/val_to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
-                                    <a href="<?= site_url('index.php/Admin/val_tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
+                                    <a href="<?= site_url('index.php/Admin/val_semua') ?>" type="button" class="btn btn-primary">Semua Jurusan</a>
+                                    <a href="<?= site_url('index.php/Admin/val_akl') ?>" type="button" class="btn btn-primary">AKL</a>
+                                    <a href="<?= site_url('index.php/Admin/val_mplb') ?>" type="button" class="btn btn-primary">MPLB</a>
+                                    <a href="<?= site_url('index.php/Admin/val_tjkt') ?>" type="button" class="btn btn-primary">TJKT</a>
+                                    <a href="<?= site_url('index.php/Admin/val_pplg') ?>" type="button" class="btn btn-primary">PPLG</a>
+                                    <a href="<?= site_url('index.php/Admin/val_to') ?>" type="button" class="btn btn-primary">TO</a>
+                                    <a href="<?= site_url('index.php/Admin/val_tm') ?>" type="button" class="btn btn-primary">TM</a>
                                 </div>
                             </div><!-- end col -->
                         </div><!-- end row -->
@@ -47,7 +44,7 @@
                                     <th><center>Nama Lengkap</th>
                                     <th><center>Kompetensi Keahlian</th>
                                     <th><center>Asal Sekolah</th>
-                                    <th><center>Verifikasi</th>
+                                    <th><center>Validasi</th>
                                     <th><center>Opsi</th>
                                 </tr>
                             </thead>
@@ -60,15 +57,24 @@
                                 <tr>
                                     <td><center><?= $no++ ?></td>
                                     <td><?= $row->nama_siswa ?></td>
-                                    <td><center>
-                                        <!-- <?= $row->kompetensi_short ?> -->
-                                    </td>
+                                    <td><center><?= $row->kompetensi_keahlian_short ?></td>
                                     <td><center><?= $row->asal_sekolah ?></td>
                                     <td><center>
-                                    <?php if($row->status_verifikasi == 'Sesuai' ){ ?>
+                                    <?php if($row->status_validasi == 'Sesuai' ){ ?>
                                         <a class="btn-success waves-effect waves-light btn-sm">Sesuai</a>
-                                        <?php }elseif($row->status_verifikasi == 'Data Tidak Sesuai'){ ?>
+                                        <?php }elseif($row->status_validasi == 'Data Tidak Sesuai'){ ?>
                                         <a class="btn-danger waves-effect waves-light btn-sm">Tidak Sesuai</a>
+                                        <?php }else{ ?>
+                                        <a class="btn-secondary waves-effect waves-light btn-sm">Not Found</a>
+                                        <?php } ?>
+                                    </td>
+                                    <td><center>
+                                    <?php if($row->status_seleksi_administrasi == 'Lolos Seleksi Administrasi' ){ ?>
+                                        <a class="btn-success waves-effect waves-light btn-sm">Lolos</a>
+                                        <?php }elseif($row->status_seleksi_administrasi == 'Belum Seleksi Administrasi'){ ?>
+                                        <a class="btn-warning waves-effect waves-light btn-sm">Belum</a>
+                                        <?php }elseif($row->status_seleksi_administrasi == 'Gagal Seleksi Administrasi'){ ?>
+                                        <a class="btn-danger waves-effect waves-light btn-sm">Gagal</a>
                                         <?php }else{ ?>
                                         <a class="btn-secondary waves-effect waves-light btn-sm">Not Found</a>
                                         <?php } ?>

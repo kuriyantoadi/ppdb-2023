@@ -115,7 +115,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url() ?>index.php/Admin/op_val">
+                                <a href="<?= base_url() ?>index.php/Admin/val_semua">
                                     <i class="dripicons-user"></i>
                                     <span data-key="">Operator Validasi</span>
                                 </a>
