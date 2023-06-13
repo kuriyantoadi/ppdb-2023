@@ -165,11 +165,12 @@ class Pendaftar extends CI_Controller
 
       $this->M_pendaftar->upload_pengajuan_up($data_tambah);
 
-      $url = site_url('Daftar/index');
+      $url = site_url('index.php/Pendaftar');
       echo $this->session->set_flashdata('msg', '
 
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-          test
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Upload Pengajuan Pendaftaran Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         ');
       redirect($url);

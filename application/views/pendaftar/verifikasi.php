@@ -31,6 +31,8 @@
 
     <div class="row g-4 mb-3">
       <div class="col-md-6 ">
+          <?= $this->session->flashdata('msg') ?>
+          <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a>
           <div class="btn-group" role="group" aria-label="Basic example">
               <a href="<?= site_url('index.php/pendaftar/') ?>" type="button" class="btn btn-primary">Semua Jurusan</a>
               <a href="<?= site_url('index.php/pendaftar/akl') ?>" type="button" class="btn btn-primary">AKL</a>
