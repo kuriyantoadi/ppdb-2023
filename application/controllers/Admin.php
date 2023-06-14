@@ -140,8 +140,8 @@ class Admin extends CI_Controller {
 
       $data_edit = array(
 
-        'id_kompentesi_1' => set_value('id_kompentesi_1'),
-        'id_kompentesi_1' => set_value('id_kompentesi_2'),
+        'id_kompetensi_1' => set_value('id_kompetensi_1'),
+        'id_kompetensi_1' => set_value('id_kompetensi_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'asal_sekolah'   => set_value('asal_sekolah'),
         'nama_siswa'   => set_value('nama_siswa'),
@@ -161,8 +161,8 @@ class Admin extends CI_Controller {
             Edit Data Siswa Berhasil
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
            </div>');
-          var_dump($id_siswa);
-      // redirect('index.php/Admin/raport_edit'.$id_siswa);
+          // var_dump($id_siswa);
+      redirect('index.php/Admin/siswa_detail/'.$id_siswa);
 
     }
 

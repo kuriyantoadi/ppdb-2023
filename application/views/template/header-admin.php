@@ -122,7 +122,7 @@
                             </li>
                             <li>
                                 <a href="<?= base_url() ?>index.php/Admin/val_semua">
-                                    <i class="dripicons-user"></i>
+                                    <i class="dripicons-document-edit"></i>
                                     <span data-key="">Operator Validasi</span>
                                 </a>
                             </li>
@@ -257,7 +257,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="dripicons-user"></i>
+                                    <i class="dripicons-user-group"></i>
                                     <span data-key="">User Operator PPDB</span>
                                 </a>
                             </li>

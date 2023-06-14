@@ -65,32 +65,32 @@
                                     <td><center><?= $row->asal_sekolah ?></td>
                                     <td><center>
                                     <?php if($row->status_verifikasi == 'Sesuai' ){ ?>
-                                        <a class="btn-success waves-effect waves-light btn-sm">Sesuai</a>
+                                        <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>
                                         <?php }elseif($row->status_verifikasi == 'Data Tidak Sesuai'){ ?>
-                                        <a class="btn-danger waves-effect waves-light btn-sm">Tidak Sesuai</a>
+                                        <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
                                         <?php }else{ ?>
-                                        <a class="btn-info btn-sm">Proses</a>
+                                        <a class="btn-info btn-sm btn-rounded">Proses</a>
                                         <?php } ?>
                                     </td>
                                     <td><center>
                                     <?php if($row->status_seleksi_administrasi == 'Lolos Seleksi Administrasi' ){ ?>
-                                        <a class="btn-success waves-effect waves-light btn-sm">Lolos </a>
+                                        <a class="btn-success waves-effect waves-light btn-sm btn-rounded">Lolos </a>
                                         <?php }elseif($row->status_seleksi_administrasi == 'Gagal Seleksi Administrasi'){ ?>
-                                        <a class="btn-danger waves-effect waves-light btn-sm">Gagal Seleksi</a>
+                                        <a class="btn-danger waves-effect waves-light btn-sm btn-rounded">Gagal Seleksi</a>
                                         <?php }else{ ?>
-                                        <a class="btn-secondary waves-effect waves-light btn-sm">Belum Seleksi</a>
+                                        <a class="btn-secondary waves-effect waves-light btn-sm btn-rounded">Belum Seleksi</a>
                                         <?php } ?>
                                     </td>
                                     <td><center>
-                                        <a type="button" class="btn btn-danger waves-effect waves-light btn-sm" title="hapus"
+                                        <a type="button" class="btn btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded" title="hapus"
                                         href="<?= site_url('index.php/Admin/ver_hapus/'.$row->id_siswa) ?>">
                                           <i class="bx bx-trash"></i>
                                         </a>
-                                        <a type="button" class="btn btn-primary waves-effect waves-light btn-sm" title="Edit"
+                                        <a type="button" class="btn btn-primary waves-effect waves-light btn-sm btn-sm btn-rounded" title="Edit"
                                         href="<?= site_url('index.php/Admin/ver_edit/'.$row->id_siswa) ?>">
                                           <i class="bx bx-pencil"></i>
                                         </a>
-                                        <a type="button" class="btn btn-info waves-effect waves-light btn-sm" title="Lihat">
+                                        <a type="button" class="btn btn-info waves-effect waves-light btn-sm btn-sm btn-rounded" title="Lihat">
                                           <i class="bx bx-search"></i>
                                         </a>
                                     </td>

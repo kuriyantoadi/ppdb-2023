@@ -33,7 +33,7 @@
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Tanggal Upload :</label>
                                 <input type="text" class="form-control" name="tgl_pendaftaran" value="<?php echo date('d-m-Y'); ?>" required readonly>
-                                <input type="hidden" value="<?= $row->id_siswa ?>">
+                                <input type="hidden" value="<?= $row->id_siswa ?>" name="id_siswa">
                             </div>
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Kompetensi Keahlian :</label>
@@ -62,53 +62,53 @@
                             
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nomor Pendaftaran :</label>
-                                <input type="number" class="form-control" placeholder="Nomor Pendaftaran" name="no_pendaftaran" required>
+                                <input type="number" class="form-control" placeholder="Nomor Pendaftaran" name="no_pendaftaran" value="<?= $row->no_pendaftaran ?>" required>
                                 <p>Dari Pengajuan Pendaftaran</p>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">NISN :</label>
-                                <input type="number" class="form-control" placeholder="NISN Siswa" name="nisn_siswa" required>
+                                <input type="number" class="form-control" placeholder="NISN Siswa" name="nisn_siswa" value="<?= $row->nisn_siswa ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nama Calon Peserta Didik :</label>
-                                <input type="text" class="form-control" placeholder="Nama" name="nama_siswa" required>
+                                <input type="text" class="form-control" placeholder="Nama" name="nama_siswa" value="<?= $row->nama_siswa ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Sekolah Asal :</label>
-                                <input type="text" class="form-control" placeholder="Sekolah Asal" name="asal_sekolah" id="asal_sekolah" required>
+                                <input type="text" class="form-control" placeholder="Sekolah Asal" name="asal_sekolah" value="<?= $row->asal_sekolah ?>" id="asal_sekolah" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Tempat Lahir :</label>
-                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" value="<?= $row->tempat_lahir ?>"  required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Tanggal Lahir :</label>
-                                <input type="date" name="tgl_lahir" class="form-control datepicker" required />
+                                <input type="date" name="tgl_lahir" class="form-control datepicker" value="<?= $row->tgl_lahir ?>" required />
                                 (Tanggal/Bulan/Tahun)
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nomor WhatsApp Siswa :</label>
-                                <input type="number" class="form-control" name="no_wa_siswa" placeholder="Nomor WhatsApp" required>
+                                <input type="number" class="form-control" name="no_wa_siswa" placeholder="Nomor WhatsApp" value="<?= $row->no_wa_siswa ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Alamat :</label>
-                                <input type="text" class="form-control" placeholder="Alamat" name="alamat" required>
+                                <input type="text" class="form-control" placeholder="Alamat" name="alamat" value="<?= $row->alamat ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nama Orang Tua/Wali :</label>
-                                <input type="text" class="form-control" placeholder="Nama Orang Tua" name="nama_org_tua" required>
+                                <input type="text" class="form-control" placeholder="Nama Orang Tua" name="nama_org_tua" value="<?= $row->nama_org_tua ?>" required>
                             </div>
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nomor WhatsApp Orang Tua :</label>
-                                <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_wa_org_tua" required>
+                                <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_wa_org_tua" value="<?= $row->no_wa_org_tua ?>" required>
                             </div>
                             
                             <!-- File Upload -->
