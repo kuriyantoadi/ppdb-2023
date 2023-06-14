@@ -33,14 +33,14 @@
       <div class="col-md-6 ">
           <?= $this->session->flashdata('msg') ?>
           <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a>
-          <div class="btn-group" role="group" aria-label="Basic example">
-              <a href="<?= site_url('index.php/pendaftar/') ?>" type="button" class="btn btn-primary">Semua Jurusan</a>
-              <a href="<?= site_url('index.php/pendaftar/akl') ?>" type="button" class="btn btn-primary">AKL</a>
-              <a href="<?= site_url('index.php/pendaftar/mplb') ?>" type="button" class="btn btn-primary">MPLB</a>
-              <a href="<?= site_url('index.php/pendaftar/tjkt') ?>" type="button" class="btn btn-primary">TJKT</a>
-              <a href="<?= site_url('index.php/pendaftar/pplg') ?>" type="button" class="btn btn-primary">PPLG</a>
-              <a href="<?= site_url('index.php/pendaftar/to') ?>" type="button" class="btn btn-primary">TO</a>
-              <a href="<?= site_url('index.php/pendaftar/tm') ?>" type="button" class="btn btn-primary">TM</a>
+          <br><div class="btn-group" role="group" aria-label="Basic example">
+              <a href="<?= site_url('index.php/pendaftar/') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
+              <a href="<?= site_url('index.php/pendaftar/akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
+              <a href="<?= site_url('index.php/pendaftar/mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
+              <a href="<?= site_url('index.php/pendaftar/tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
+              <a href="<?= site_url('index.php/pendaftar/pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
+              <a href="<?= site_url('index.php/pendaftar/to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
+              <a href="<?= site_url('index.php/pendaftar/tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
           </div>
       </div><!-- end col -->
     </div><!-- end row -->
@@ -75,7 +75,7 @@
                 <?php }elseif($row->status_verifikasi == 'Data Tidak Sesuai'){ ?>
                   <a class="btn-danger waves-effect waves-light btn-sm">Data Tidak Sesuai</a>
                 <?php }else{ ?>
-                  <a class="btn-secondary waves-effect waves-light btn-sm">Belum Ada Keterangan</a>
+                  <a class="btn-secondary btn-sm">Belum Ada Keterangan</a>
                 <?php } ?>
               </td>
               <td><center>

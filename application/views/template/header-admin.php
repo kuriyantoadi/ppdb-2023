@@ -115,6 +115,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="<?= base_url() ?>index.php/Admin/siswa_tampil">
+                                    <i class="dripicons-user"></i>
+                                    <span data-key="">Data Siswa</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="<?= base_url() ?>index.php/Admin/val_semua">
                                     <i class="dripicons-user"></i>
                                     <span data-key="">Operator Validasi</span>

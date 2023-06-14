@@ -23,7 +23,23 @@ class M_pendaftar extends CI_Model{
     return $tampil;
   }
 
-   function val_tjkt()
+
+  // awal data siswa
+  public function siswa_tampil()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    // $this->db->where('short_kompetensi_1', 'TJKT');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  
+  // akhir data siswa
+
+  // Awal val
+  public function val_tjkt()
   {
      $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -83,10 +99,14 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
+  // akhir val
+
   function tampil_kompetensi_1(){
     $tampil = $this->db->get('tb_kompetensi_1')->result();
     return $tampil;
   }
+
+
 
   function tampil_kompetensi_2(){
     $tampil = $this->db->get('tb_kompetensi_2')->result();
