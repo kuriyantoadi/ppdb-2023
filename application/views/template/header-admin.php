@@ -121,97 +121,26 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url() ?>index.php/Admin/val_semua">
+                                <a href="<?= base_url() ?>index.php/Admin/ver_semua">
                                     <i class="dripicons-document-edit"></i>
-                                    <span data-key="">Operator Validasi</span>
+                                    <span data-key="">Operator Verifikasi</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
+                                <a href="<?= base_url() ?>index.php/Admin/adm_semua">
                                     <i class="dripicons-document-new"></i>
-                                    <span data-key="t-apps">Operator Berkas</span>
+                                    <span data-key="">Operator Administrasi</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">Semua</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKJ</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">RPL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">AKL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OTKP</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TPM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKR</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
+
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
+                                <a href="<?= base_url() ?>index.php/Admin/wan_semua">
                                     <i class="dripicons-microphone"></i>
-                                    <span data-key="t-apps">Operator Wawancara</span>
+                                    <span data-key="">Operator Administrasi</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">Semua</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKJ</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">RPL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">AKL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OTKP</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TPM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKR</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
+                            
+                            
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i class="dripicons-lightbulb"></i>

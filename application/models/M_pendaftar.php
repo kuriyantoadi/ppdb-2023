@@ -7,7 +7,7 @@ class M_pendaftar extends CI_Model{
     $this->db->insert('tb_siswa', $data_tambah);
   }
 
-  function val_semua()
+  function ver_semua()
   {
     $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -38,8 +38,8 @@ class M_pendaftar extends CI_Model{
   
   // akhir data siswa
 
-  // Awal val
-  public function val_tjkt()
+  // Awal ver
+  public function ver_tjkt()
   {
      $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -49,7 +49,7 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-  public function val_pplg()
+  public function ver_pplg()
   {
     $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -59,7 +59,7 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-  public function val_tm()
+  public function ver_tm()
   {
      $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -69,7 +69,7 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-  public function val_to()
+  public function ver_to()
   {
     $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -79,7 +79,7 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-  public function val_akl()
+  public function ver_akl()
   {
     $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -89,7 +89,7 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-  public function val_mplb()
+  public function ver_mplb()
   {
      $this->db->select('*');
     $this->db->from('tb_pendaftar');
@@ -106,8 +106,6 @@ class M_pendaftar extends CI_Model{
     return $tampil;
   }
 
-
-
   function tampil_kompetensi_2(){
     $tampil = $this->db->get('tb_kompetensi_2')->result();
     return $tampil;
@@ -116,7 +114,6 @@ class M_pendaftar extends CI_Model{
   function upload_pengajuan_up($data_tambah){
     $this->db->insert('tb_pendaftar', $data_tambah);
   }
-
 
   function komptensi()
   {
@@ -127,6 +124,9 @@ class M_pendaftar extends CI_Model{
     $query = $this->db->get()->result();
     return $query;
   }
+
+
+  
 
 }
 

@@ -1,8 +1,0 @@
-__ci_last_regenerate|i:1684864204;siswa|b:1;ses_id|s:1:"1";ses_nisn|s:2:"50";xeimaiPh9ahs4ie|b:1;ses_user|s:5:"admin";msg|s:306:"
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>Hapus Siswa Berhasil</strong>
-
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>";__ci_vars|a:1:{s:3:"msg";s:3:"old";}
