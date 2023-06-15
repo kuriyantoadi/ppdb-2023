@@ -70,26 +70,27 @@
               <td><center><?= $row->nama_kompetensi_1 ?></td>
               <td><center><?= $row->asal_sekolah ?></td>
               <td><center>
-              <?php if($row->status_verifikasi == 'Sesuai' ){ ?>
-                  <a class="btn-success waves-effect waves-light btn-sm">Sesuai</a>
-                <?php }elseif($row->status_verifikasi == 'Data Tidak Sesuai'){ ?>
-                  <a class="btn-danger waves-effect waves-light btn-sm">Data Tidak Sesuai</a>
+                <?php if($row->status_verifikasi == 'Data Sesuai' ){ ?>
+                      <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>
+                <?php }elseif($row->status_verifikasi == 'Proses'){ ?>
+                      <a class="btn-info waves-effect waves-light btn-sm btn-sm btn-rounded">Proses</a>
+                <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
+                    <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
                 <?php }else{ ?>
-                  <a class="btn-secondary btn-sm">Belum Ada Keterangan</a>
+                    <a class="btn-secondary btn-sm btn-rounded">Kosong</a>
                 <?php } ?>
               </td>
+
               <td><center>
-              <?php if($row->status_seleksi_administrasi == 'Lolos Seleksi Administrasi' ){ ?>
-                  <a class="btn-success waves-effect waves-light btn-sm">Lolos Seleksi Administrasi</a>
-                <?php }elseif($row->status_seleksi_administrasi == 'Belum Seleksi Administrasi'){ ?>
-                  <a class="btn-warning waves-effect waves-light btn-sm">Belum Seleksi Administrasi</a>
-                <?php }elseif($row->status_seleksi_administrasi == 'Gagal Seleksi Administrasi'){ ?>
-                  <a class="btn-danger waves-effect waves-light btn-sm">Gagal Seleksi Administrasi</a>
-                <?php }else{ ?>
-                  <a class="btn-secondary waves-effect waves-light btn-sm">Belum Ada Keterangan</a>
-                <?php } ?>
+              <?php if($row->status_seleksi_administrasi == 'Data Sesuai' ){ ?>
+                        <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Data Sesuai</a>
+                  <?php }elseif($row->status_seleksi_administrasi == 'Belum Seleksi'){ ?>
+                        <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Belum Seleksi</a>
+                  <?php }else{ ?>
+                      <a class="btn-secondary btn-sm btn-rounded">Kosong</a>
+                  <?php } ?>
               </td>
-            </td>
+            
           </tr>
           <?php } ?>
       </tbody>

@@ -16,7 +16,7 @@ class Pendaftar extends CI_Controller
   //Login User
   public function index()
   {
-    $data['tampil'] = $this->M_pendaftar->val_semua();
+    $data['tampil'] = $this->M_pendaftar->ver_semua();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -25,7 +25,7 @@ class Pendaftar extends CI_Controller
 
   public function tjkt()
   {
-    $data['tampil'] = $this->M_pendaftar->val_tjkt();
+    $data['tampil'] = $this->M_pendaftar->ver_tjkt();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -34,7 +34,7 @@ class Pendaftar extends CI_Controller
 
   public function pplg()
   {
-    $data['tampil'] = $this->M_pendaftar->val_pplg();
+    $data['tampil'] = $this->M_pendaftar->ver_pplg();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -43,7 +43,7 @@ class Pendaftar extends CI_Controller
 
   public function mplb()
   {
-    $data['tampil'] = $this->M_pendaftar->val_mplb();
+    $data['tampil'] = $this->M_pendaftar->ver_mplb();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -52,7 +52,7 @@ class Pendaftar extends CI_Controller
 
   public function akl()
   {
-    $data['tampil'] = $this->M_pendaftar->val_akl();
+    $data['tampil'] = $this->M_pendaftar->ver_akl();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -61,7 +61,7 @@ class Pendaftar extends CI_Controller
 
   public function tm()
   {
-    $data['tampil'] = $this->M_pendaftar->val_tm();
+    $data['tampil'] = $this->M_pendaftar->ver_tm();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
@@ -70,7 +70,7 @@ class Pendaftar extends CI_Controller
 
   public function to()
   {
-    $data['tampil'] = $this->M_pendaftar->val_to();
+    $data['tampil'] = $this->M_pendaftar->ver_to();
 
     $this->load->view('template/header-pendaftar.php');
     $this->load->view('pendaftar/verifikasi', $data);
