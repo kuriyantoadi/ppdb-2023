@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
 
       // session login
 			if ($this->session->userdata('xeimaiPh9ahs4ie') != true) {
-				$url = base_url('Login/fa');
+				$url = base_url('index.php/Login/fa');
 				redirect($url);
 			}
 	}

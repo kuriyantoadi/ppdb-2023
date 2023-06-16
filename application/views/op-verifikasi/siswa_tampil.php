@@ -23,22 +23,7 @@
                     <div class="card">  
                         <div class="card-body">
 
-                        <div class="row g-4 mb-2">
-
-                            <div class="col-md-6 ">
-                             <br><?= $this->session->flashdata('msg') ?>
-                               <!-- <a href="<?= site_url('index.php/Admin/siswa_tambah') ?>" type="button" class="btn btn-info btn-sm mb-1">Tambah</a> -->
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= site_url('index.php/Admin/ver_semua') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
-                                    <a href="<?= site_url('index.php/Admin/ver_tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
-                                </div>
-                            </div><!-- end col -->
-                        </div><!-- end row -->
+                       
 
                         <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
                             <thead>
@@ -80,11 +65,10 @@
                                             Opsi <i class="mdi mdi-chevron-down"></i>
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Admin/siswa_detail/'.$row->id_siswa) ?>">Detail</a>
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_edit/'.$row->id_siswa) ?>">Edit</a>
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_proses/'.$row->id_siswa) ?>">Proses</a>
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
+                                            <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/siswa_detail/'.$row->id_siswa) ?>">Detail</a>
+                                            <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
+                                            <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_proses/'.$row->id_siswa) ?>">Proses</a>
+                                            <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
                                         </div>
                                     </div>
                                     </td>

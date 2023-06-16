@@ -59,6 +59,20 @@
 
                                                 <tbody>
                                                     <tr>
+                                                        <th>Status Verifikasi</th>
+                                                        <td>
+                                                            <?php if($row->status_verifikasi == 'Data Sesuai' ){ ?>
+                                                                <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>
+                                                            <?php }elseif($row->status_verifikasi == 'Proses'){ ?>
+                                                                <a class="btn-info waves-effect waves-light btn-sm btn-sm btn-rounded">Proses</a>
+                                                            <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
+                                                                <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
+                                                            <?php }else{ ?>
+                                                                <a class="btn-secondary btn-sm btn-rounded">Menunggu</a>
+                                                            <?php } ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
                                                         <th>Tanggal Upload</th>
                                                         <td><?= $row->tgl_upload ?></td>
                                                     </tr>
@@ -127,19 +141,6 @@
                     </div> <!-- end col -->
                 </div>
                 <!-- end row data siswa-->
-
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card">
-                                <h4 class="card-title">Bukti Pendaftaran</h4>
-                        </div>
-                    </div>
-                    
-                </div>
-                <!-- end row raport-->
-
-                
-                <!-- end row raport-->
 
             </div> <!-- container-fluid -->
         </div>

@@ -205,8 +205,15 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
-
-
+ function ver_kompetensi($ses_kompetensi)
+  {
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    $this->db->where('short_kompetensi_1', $ses_kompetensi);
+    $query = $this->db->get()->result();
+    return $query;
+  }
   
 
 }

@@ -89,7 +89,7 @@ class Pendaftar extends CI_Controller
 
   function upload_pengajuan_up(){
 	
-    $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('tgl_upload','Tgl_upload', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('no_pendaftaran','No_pendaftaran', 'trim','required','min_length[3]'); 
     $this->form_validation->set_rules('id_kompetensi_1','Id_kompetensi_1', 'trim','required','min_length[1]');
     $this->form_validation->set_rules('id_kompetensi_2','Id_kompetensi_2', 'trim','required','min_length[1]');
@@ -192,7 +192,7 @@ class Pendaftar extends CI_Controller
       // eksekusi query INSERT
       $data_tambah = [
 
-        'tgl_pendaftaran'   => set_value('tgl_pendaftaran'),
+        'tgl_upload'   => set_value('tgl_upload'),
         'no_pendaftaran'   => set_value('no_pendaftaran'),
         'id_kompetensi_1' => set_value('id_kompetensi_1'),
         'id_kompetensi_2' => set_value('id_kompetensi_2'),

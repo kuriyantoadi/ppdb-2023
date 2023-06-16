@@ -40,7 +40,7 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <a href="index.php" class="logo logo-dark">
+                            <a href="<?= site_url('index.php/Op_ver/') ?>" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="<?= base_url() ?>assets/images/logo-sm.svg" alt="" height="24">
                                 </span>
@@ -49,7 +49,7 @@
                                 </span>
                             </a>
 
-                            <a href="index.php" class="logo logo-light">
+                            <a href="<?= site_url('index.php/Op_ver/') ?>" class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="<?= base_url() ?>assets/images/logo-sm.svg" alt="" height="24">
                                 </span>
@@ -78,7 +78,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?= base_url() ?>assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Administrator</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Operator</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -90,6 +90,8 @@
                             </div>
                         </div>
                         <!-- user akhir -->
+
+
                     </div>
                 </div>
             </header>
@@ -105,90 +107,21 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title" data-key="t-menu">Admin PPDB</li>
+                            <li class="menu-title" data-key="t-menu">Verifikasi PPDB</li>
                             <li>
-                                <a href="<?= base_url() ?>index.php/Admin">
+                                <a href="<?= base_url() ?>index.php/Op_ver/index">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
+                            
                             <li>
-                                <a href="<?= base_url() ?>index.php/Admin/siswa_tampil">
-                                    <i class="dripicons-user"></i>
-                                    <span data-key="">Data Siswa</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url() ?>index.php/Admin/ver_semua">
+                                <a href="<?= base_url() ?>index.php/Op_ver/siswa_tampil">
                                     <i class="dripicons-document-edit"></i>
                                     <span data-key="">Operator Verifikasi</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="<?= base_url() ?>index.php/Admin/adm_semua">
-                                    <i class="dripicons-document-new"></i>
-                                    <span data-key="">Operator Administrasi</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="<?= base_url() ?>index.php/Admin/wan_semua">
-                                    <i class="dripicons-microphone"></i>
-                                    <span data-key="">Operator Administrasi</span>
-                                </a>
-                            </li>
-                            
-                            
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-lightbulb"></i>
-                                    <span data-key="t-apps">Operator Akademik</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">Semua</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKJ</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">RPL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">AKL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OTKP</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TPM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKR</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="dripicons-user-group"></i>
-                                    <span data-key="">User Operator PPDB</span>
-                                </a>
-                            </li>
-
+            
                         </ul>
                         <!-- Left Menu End -->
 

@@ -44,6 +44,7 @@
                             <thead>
                                 <tr>
                                     <th><center>No</th>
+                                    <th><center>Tgl Upload</th>
                                     <th><center>Nama Lengkap</th>
                                     <th><center>Kompetensi</th>
                                     <th><center>Asal Sekolah</th>
@@ -59,6 +60,7 @@
                                 ?>
                                 <tr>
                                     <td><center><?= $no++ ?></td>
+                                    <td><center><?= $row->tgl_upload ?></td>
                                     <td><?= $row->nama_siswa ?></td>
                                     <td><center><?= $row->short_kompetensi_1 ?></td>
                                     <td><center><?= $row->asal_sekolah ?></td>
@@ -70,7 +72,7 @@
                                         <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
                                             <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
                                         <?php }else{ ?>
-                                            <a class="btn-secondary btn-sm btn-rounded">Kosong</a>
+                                            <a class="btn-secondary btn-sm btn-rounded">Menunggu</a>
                                         <?php } ?>
                                     </td>
                                     <td>

@@ -90,7 +90,55 @@ class Login extends CI_Controller {
         $this->session->set_userdata('ses_user', $data['username']);
         redirect('index.php/Admin/index');
 
-      }else {
+      }elseif ($data['status']=='opver_tjkt'){
+        $this->session->set_userdata('opver_tjkt', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }elseif ($data['status']=='opver_pplg'){
+        $this->session->set_userdata('opver_pplg', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }elseif ($data['status']=='opver_akl'){
+        $this->session->set_userdata('opver_akl', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }elseif ($data['status']=='opver_mplb'){
+        $this->session->set_userdata('opver_mplb', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }elseif ($data['status']=='opver_tm'){
+        $this->session->set_userdata('opver_tm', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }elseif ($data['status']=='opver_to'){
+        $this->session->set_userdata('opver_to', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_ver/index');
+
+      }else{
         $url = base_url('index.php/Login/fa');
         echo $this->session->set_flashdata('msg', '
 
@@ -128,7 +176,7 @@ class Login extends CI_Controller {
   {
     $this->session->sess_destroy();
     $url = base_url();
-    redirect('C_login/fa');
+    redirect('index.php/Login/fa');
   }
 
 }
