@@ -32,13 +32,23 @@
 
                             <div class="card-header">
                                 <a href="<?= site_url('index.php/admin/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
-                                <a href="<?= site_url('index.php/admin/siswa_hapus/'.$row->id_siswa) ?>" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
-                                <a href="<?= site_url('index.php/admin/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-primary btn-sm waves-effect waves-light">Edit</a>
+                                <a href="<?= site_url('index.php/admin/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
+                                <a href="<?= site_url('index.php/admin/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a>
+                                 <div class="btn-group" role="group">
+                                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Opsi <i class="mdi mdi-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_proses/'.$row->id_siswa) ?>">Proses</a>
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body p-4">
 
                                 <div class="row">
-                                    <div class="col-xl-8">
+                                    <div class="col-xl-12">
                                         <div class="table">
                                             <table class="table mb-0 table-bordered table-hover">
                                                 <thead>
@@ -100,6 +110,12 @@
                                                         <th>No WA Ortu/Wali</th>
                                                         <td><?= $row->no_wa_org_tua ?></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Bukti Pengajuan Pendaftaran</td>
+                                                        <td>
+                                                            <embed type="application/pdf" src="<?= site_url('assets/upload_file/'.$row->pdf_pengajuan_pendaftaran) ?>" width="80%" height="600px"></embed>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                                 <?php } ?>
                                             </table>
@@ -113,14 +129,12 @@
                 <!-- end row data siswa-->
 
                 <div class="row">
-                    <div class="col-xl-4">
+                    <div class="col-xl-12">
                         <div class="card">
-                            <div class="card-body text-center">
                                 <h4 class="card-title">Bukti Pendaftaran</h4>
-                                <a href="#" type="button" class="btn btn-link waves-effect">(File PDF)</a>
-                            </div>
                         </div>
                     </div>
+                    
                 </div>
                 <!-- end row raport-->
 

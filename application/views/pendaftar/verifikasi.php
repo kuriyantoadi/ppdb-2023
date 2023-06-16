@@ -30,7 +30,7 @@
     
 
     <div class="row g-4 mb-3">
-      <div class="col-md-6 ">
+      <div class="col-12 ">
           <?= $this->session->flashdata('msg') ?>
           <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a>
           <br><div class="btn-group" role="group" aria-label="Basic example">

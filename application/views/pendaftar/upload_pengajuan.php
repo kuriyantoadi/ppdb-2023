@@ -33,10 +33,9 @@
       <!-- kosong -->
     </div>
     <div class="col-8">
-
-    <?=
-    form_open_multipart('index.php/Pendaftar/upload_pengajuan_up');
-    ?>
+  <?= $this->session->flashdata('msg') ?>
+  
+    <?= form_open_multipart('index.php/Pendaftar/upload_pengajuan_up'); ?>
     <form class="m-t-40" novalidate>
 
       <h5>A. IDENTITAS CALON PESERTA DIDIK</h5>

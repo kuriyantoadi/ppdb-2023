@@ -89,7 +89,7 @@ class Pendaftar extends CI_Controller
 
   function upload_pengajuan_up(){
 	
-    $this->form_validation->set_rules('tgl_upload','tgl_upload', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('no_pendaftaran','No_pendaftaran', 'trim','required','min_length[3]'); 
     $this->form_validation->set_rules('id_kompetensi_1','Id_kompetensi_1', 'trim','required','min_length[1]');
     $this->form_validation->set_rules('id_kompetensi_2','Id_kompetensi_2', 'trim','required','min_length[1]');
@@ -106,18 +106,18 @@ class Pendaftar extends CI_Controller
     $this->form_validation->set_rules('no_wa_org_tua','No_wa_org_tua', 'trim|required');
 
     if ($this->form_validation->run() == FALSE) {
-      echo 'upload error';    
-      echo validation_errors();
-      exit ();
+      // echo 'upload error';    
+      // echo validation_errors();
+      // exit ();
 
-      // $url = site_url('Daftar/index');
-      // echo $this->session->set_flashdata('msg', '
+      $url = site_url('index.php/pendaftar/upload_pengajuan');
+      echo $this->session->set_flashdata('msg', '
 
-      //   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      //    Proses Pendaftaran gagal, silahkan dicoba kembali.
-      //   </div>
-      //   ');
-      // redirect($url);
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         Kolom ada yang kosong, tolong upload ulang dan isi semua kolom.
+        </div>
+        ');
+      redirect($url);
 
     } else {
 
@@ -130,20 +130,69 @@ class Pendaftar extends CI_Controller
       $this->load->library('upload', $config);
       $this->upload->initialize($config);
 
+      $nisn_siswa = set_value('nisn_siswa');
+      $no_pendaftaran = set_value('no_pendaftaran');
+
+
+      $cek_nisn = $this->M_pendaftar->cek_nisn($nisn_siswa);
+        // cek jika nisn sudah terdaftar
+        if(!empty($cek_nisn))
+        {
+          $url = site_url('index.php/Pendaftar/upload_pengajuan');
+          echo $this->session->set_flashdata('msg', '
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                NISN sudah terdaftar di sistem, tolong cek kembali atau hubungi operator PPDB.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            ');
+          redirect($url);
+        }
+
+        $cek_no_pendaftaran = $this->M_pendaftar->cek_no_pendaftaran($no_pendaftaran);
+        // cek jika nisn sudah terdaftar
+        if(!empty($cek_no_pendaftaran))
+        {
+          $url = site_url('index.php/Pendaftar/upload_pengajuan');
+          echo $this->session->set_flashdata('msg', '
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Nomor Pendaftaran sudah terdaftar di sistem, tolong cek kembali atau hubungi operator PPDB.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            ');
+          redirect($url);
+        }
+
+      // exit();
+
+
       if (!$this->upload->do_upload('pdf_pengajuan_pendaftaran')) {
 
-       $error = array('error' => $this->upload->display_errors());
-            echo var_dump($error);
-            // exit();
+      // untuk testing error
+      //  $error = array('error' => $this->upload->display_errors());
+      // echo var_dump($error);
+      // exit();
+
+      $url = site_url('index.php/Pendaftar/upload_pengajuan');
+      echo $this->session->set_flashdata('msg', '
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Upload Pengajuan Pendaftaran Gagal, ukuran file Upload lebih dari 1 MB atau file tidak PDF.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        ');
+      redirect($url);
+
       } else {
         $upload_pengajuan_pendaftaran = $this->upload->data();
       }
     // akhir cek dan upload file skl
 
       // eksekusi query INSERT
-      $data_tambah = array(
+      $data_tambah = [
 
-        'tgl_upload'   => set_value('tgl_upload'),
+        'tgl_pendaftaran'   => set_value('tgl_pendaftaran'),
         'no_pendaftaran'   => set_value('no_pendaftaran'),
         'id_kompetensi_1' => set_value('id_kompetensi_1'),
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
@@ -161,7 +210,7 @@ class Pendaftar extends CI_Controller
         'status_siswa'   => 'siswa',
         'pdf_pengajuan_pendaftaran' => $upload_pengajuan_pendaftaran['file_name'],
         
-      );
+      ];
 
       $this->M_pendaftar->upload_pengajuan_up($data_tambah);
 
