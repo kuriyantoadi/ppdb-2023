@@ -20,7 +20,7 @@
                         
                         <div class="row">
                             
-                            <div class="col-6">
+                            <div class="col-12">
 
                             <?=
                             form_open('index.php/Admin/siswa_edit_up');
@@ -32,7 +32,7 @@
                             <h5>A. IDENTITAS CALON PESERTA DIDIK</h5>
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Tanggal Upload :</label>
-                                <input type="text" class="form-control" name="tgl_pendaftaran" value="<?php echo date('d-m-Y'); ?>" required readonly>
+                                <input type="text" class="form-control" name="tgl_upload" value="<?php echo date('d-m-Y'); ?>" required readonly>
                                 <input type="hidden" value="<?= $row->id_siswa ?>" name="id_siswa">
                             </div>
                             <div class="form-group">
@@ -127,16 +127,12 @@
                                 <button type="submit" name="upload" value="upload" class="btn btn-primary mb-lg-4 mt-lg-4">Submit</button>
                                 </div>
                             </center>
-
-                            </div>
                             <?= 
                             form_close();
                             }
                             ?>
                             </form>
-
-
-                            <div class="col">
+                           
                              <!-- kosong -->
                                 <h5 class="mt-lg-5">B. Upload Bukti Pengajuan Pendaftaran</h5>
                                  <?= form_open_multipart('index.php/Pendaftar/upload_pengajuan_up');  ?>
@@ -151,7 +147,12 @@
                                     </div>
                                 <?= form_close() ?>
                                 </form>
-                            </div>
+                        
+                        </div>
+                           
+
+
+                            
 
                         </div>
 

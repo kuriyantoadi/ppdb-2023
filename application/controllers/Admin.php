@@ -89,6 +89,17 @@ class Admin extends CI_Controller {
     $this->load->view('template/footer-admin.php');
   }
 
+  public function siswa_detail($id_siswa)
+  {
+    $data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+    $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
+    $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/siswa_detail', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
   public function siswa_hapus($id_siswa){
     $id_siswa = array('id_siswa' => $id_siswa);
 
@@ -303,6 +314,7 @@ class Admin extends CI_Controller {
 
         $data_edit = array(
           'status_verifikasi' => 'Data Sesuai',
+          'status_seleksi_administrasi' => 'Belum Seleksi',
         );
 
         $this->M_admin->siswa_edit_up($data_edit, $id_siswa);

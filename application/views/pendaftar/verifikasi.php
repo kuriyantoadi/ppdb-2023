@@ -77,7 +77,7 @@
                 <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
                     <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
                 <?php }else{ ?>
-                    <a class="btn-secondary btn-sm btn-rounded">Kosong</a>
+                    <a class="btn-secondary btn-sm btn-rounded">Menunggu</a>
                 <?php } ?>
               </td>
 

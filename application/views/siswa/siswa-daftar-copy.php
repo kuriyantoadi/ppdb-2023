@@ -43,7 +43,7 @@
       <h5>A. IDENTITAS CALON PESERTA DIDIK</h5>
       <div class="form-group">
         <label class="control-label mt-3" for="email">Tanggal Pendaftaran :</label>
-        <input type="text" class="form-control" name="tgl_pendaftaran" value="<?php echo date('d-m-Y'); ?>" required readonly>
+        <input type="text" class="form-control" name="tgl_upload" value="<?php echo date('d-m-Y'); ?>" required readonly>
       </div>
       <div class="form-group">
         <label class="control-label mt-3" for="email">Kompetensi Keahlian :</label>

@@ -23,9 +23,9 @@ class Daftar extends CI_Controller
 
   public function daftar_up()
   {
-    // $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim', 'required');
+    // $this->form_validation->set_rules('tgl_upload','tgl_upload', 'trim', 'required');
 
-    $this->form_validation->set_rules('tgl_pendaftaran','Tgl_pendaftaran', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('tgl_upload','tgl_upload', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('kompetensi_keahlian','kompetensi_keahlian', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('kompetensi_keahlian_2','kompetensi_keahlian_2', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('nisn_siswa','Nisn_siswa', 'trim','required','min_length[3]');
@@ -202,7 +202,7 @@ class Daftar extends CI_Controller
       // eksekusi query INSERT
       $data_tambah = array(
 
-        'tgl_pendaftaran'   => set_value('tgl_pendaftaran'),
+        'tgl_upload'   => set_value('tgl_upload'),
         'kompetensi_keahlian' => set_value('kompetensi_keahlian'),
         'kompetensi_keahlian_2' => set_value('kompetensi_keahlian_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
