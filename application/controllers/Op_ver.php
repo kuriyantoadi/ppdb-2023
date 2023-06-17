@@ -9,6 +9,8 @@ class Op_ver extends CI_Controller {
       $this->load->model('M_admin');
       $this->load->model('M_pendaftar');
 
+      $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
+
       if ($this->session->userdata('opver_tjkt') != true && 
           $this->session->userdata('opver_pplg') != true &&
           $this->session->userdata('opver_akl') != true &&
@@ -26,8 +28,14 @@ class Op_ver extends CI_Controller {
 
   public function index()
   {
+    $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
+    $data['count'] = $this->M_admin->count_siswa($ses_kompetensi);
+    $data['count_terverifikasi'] = $this->M_admin->count_terverifikasi($ses_kompetensi);
+    $data['count_belum_terverifkasi'] = $data['count'] - $data['count_terverifikasi'];
+    $data['ses_kompetensi'] = $ses_kompetensi;
+
     $this->load->view('template/header-opver.php');
-    $this->load->view('op-verifikasi/dashboard');
+    $this->load->view('op-verifikasi/dashboard', $data);
     $this->load->view('template/footer-admin.php');
   }
   
@@ -60,7 +68,7 @@ class Op_ver extends CI_Controller {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Admin/ver_semua/');
+        redirect('index.php/Op_ver/siswa_tampil/');
 
       } else {
 
@@ -76,7 +84,7 @@ class Op_ver extends CI_Controller {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Admin/ver_semua/');
+        redirect('index.php/Op_ver/siswa_tampil/');
 
       }
 
@@ -88,7 +96,7 @@ class Op_ver extends CI_Controller {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Admin/ver_semua/');
+        redirect('index.php/Op_ver/siswa_tampil/');
 
       } else {
 
@@ -104,7 +112,7 @@ class Op_ver extends CI_Controller {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Admin/ver_semua/');
+        redirect('index.php/Op_ver/siswa_tampil/');
       }
     }
 
@@ -113,7 +121,7 @@ class Op_ver extends CI_Controller {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Admin/ver_semua/');
+        redirect('index.php/Op_ver/siswa_tampil/');
 
       } else {
 
@@ -130,11 +138,8 @@ class Op_ver extends CI_Controller {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Op_ver/ver_semua/');
-
+        redirect('index.php/Op_ver/siswa_tampil/');
       }
-
-      
     }
    // akhir verifikasi opsi
   

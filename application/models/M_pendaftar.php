@@ -155,7 +155,7 @@ class M_pendaftar extends CI_Model{
 
   public function adm_mplb()
   {
-     $this->db->select('*');
+    $this->db->select('*');
     $this->db->from('tb_pendaftar');
     $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
     $this->db->where('short_kompetensi_1', 'MPLB');

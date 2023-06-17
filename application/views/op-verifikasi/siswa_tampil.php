@@ -22,9 +22,7 @@
                 <div class="col-12">
                     <div class="card">  
                         <div class="card-body">
-
-                       
-
+                        <?= $this->session->flashdata('msg') ?>
                         <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
                             <thead>
                                 <tr>

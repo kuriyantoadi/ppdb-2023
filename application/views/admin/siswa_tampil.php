@@ -22,6 +22,7 @@
                         <div class="row g-4 mb-2">
 
                             <div class="col-md-6 ">
+                                <?= $this->session->flashdata('msg') ?>
                                <!-- <a href="<?= site_url('index.php/Admin/siswa_tambah') ?>" type="button" class="btn btn-info btn-sm mb-1">Tambah</a> -->
                                 <br>
                                 <div class="btn-group" role="group" aria-label="Basic example">

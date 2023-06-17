@@ -13,128 +13,80 @@
                     <div class="card">  
                         
                         <div class="card-header">
-                            <h4 class="card-title">Dashboard Siswa Mendaftar</h4>
+                            <h3 class="card-title">Halaman Operator Verifikasi</h3>
+                            <p>
+                                Selamat Datang di System PPDB SMKN 1 Kragilan, anda sedang login pada akun Operator Verifikasi data. 
+                                Akun sangat sensitif, jika ada kesulitan untuk menggunakan akun ini, silahkan hubungi admin.
+                            </p>
+                            
+                            <div class="row">
+                                <div class="col-xl-4 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-h-100">
+                                        <!-- card body -->
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <span class="text-muted mb-3 lh-1 d-block text-truncate">
+                                                        Semua Pendaftar Jurusan <?= $ses_kompetensi ?>
+                                                    </span>
+                                                    <h4 class="mb-1">
+                                                        <p><span class="counter-value" data-target="<?= $count ?>"> </span> Siswa
+                                                    </p>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col --> 
+
+                                <div class="col-xl-4 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-h-100">
+                                        <!-- card body -->
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <span class="text-muted mb-3 lh-1 d-block text-truncate">
+                                                        Sudah Terverifikasi
+                                                    </span>
+                                                    <h4 class="mb-1">
+                                                        <p><span class="counter-value" data-target="<?= $count_terverifikasi ?>"></span> Siswa</p>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-4 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-h-100">
+                                        <!-- card body -->
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <span class="text-muted mb-3 lh-1 d-block text-truncate">Belum Terverifikasi</span>
+                                                    <h4 class="mb-1">
+                                                        <p><span class="counter-value" data-target="<?= $count_belum_terverifkasi ?>"></span> Siswa</p>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                            </div><!-- end row -->
+
+
+
                         </div>
-                        <div class="card-body">
                             
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">TKJT</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col --> 
-                            
-                            <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">PPLG</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
-
-
-                             <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">AKL</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
-
-                            <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">MPLB</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
-
-
-                             <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">TPM</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
-
-                             <div class="col-xl-3 col-md-6">
-                                <!-- card -->
-                                <div class="card card-h-100">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">TKR</span>
-                                                <h4 class="mb-1">
-                                                    <p><span class="counter-value" data-target="865"></span> Siswa</p>
-                                                </h4>
-                                            </div>
-
-                                        </div>
-                                       
-                                    </div><!-- end card body -->
-                                </div><!-- end card -->
-                            </div><!-- end col -->
-
-                        </div><!-- end row -->
+                        
                     </div>
                 </div> <!-- end col -->
             </div> <!-- end row -->
