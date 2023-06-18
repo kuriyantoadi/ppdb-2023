@@ -240,9 +240,14 @@ class Pendaftar extends CI_Controller
     // akhir cek dan upload file skl
 
       // eksekusi query INSERT
+      date_default_timezone_set('Asia/Jakarta');
+      // echo date("Y-m-d H:i:s");
+
       $data_tambah = [
 
         'tgl_upload'   => format_indo(date('Y-m-d H:i:s')),
+        // 'tgl_upload'   => date('Y-m-d H:i:s'),
+
         'no_pendaftaran'   => set_value('no_pendaftaran'),
         'id_kompetensi_1' => set_value('id_kompetensi_1'),
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
