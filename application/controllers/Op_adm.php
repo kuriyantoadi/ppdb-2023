@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Op_ver extends CI_Controller {
+class Op_adm extends CI_Controller {
 
   public function __construct()
     {
@@ -9,15 +9,7 @@ class Op_ver extends CI_Controller {
       $this->load->model('M_admin');
       $this->load->model('M_pendaftar');
 
-      $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
-
-      if ($this->session->userdata('opadm_tjkt') != true && 
-          $this->session->userdata('opadm_pplg') != true &&
-          $this->session->userdata('opadm_akl') != true &&
-          $this->session->userdata('opadm_mplb') != true &&
-          $this->session->userdata('opadm_to') != true &&
-          $this->session->userdata('opadm_tm') != true 
-        ) {
+      if ($this->session->userdata('op_adm') != true) {
             $url = base_url('index.php/Login/fa');
             redirect($url);
         }
@@ -28,24 +20,21 @@ class Op_ver extends CI_Controller {
 
   public function index()
   {
-    $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
-    $data['count'] = $this->M_admin->count_siswa($ses_kompetensi);
-    $data['count_terverifikasi'] = $this->M_admin->count_terverifikasi($ses_kompetensi);
-    $data['count_belum_terverifkasi'] = $data['count'] - $data['count_terverifikasi'];
-    $data['ses_kompetensi'] = $ses_kompetensi;
+    $data['count_adm'] = $this->M_admin->count_adm();
+    $data['count_selesai_adm'] = $this->M_admin->count_selesai_adm();
+    $data['count_belum_adm'] = $data['count_adm'] - $data['count_selesai_adm'];
 
-    $this->load->view('template/header-opver.php');
-    $this->load->view('op-verifikasi/dashboard', $data);
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/dashboard', $data);
     $this->load->view('template/footer-admin.php');
   }
   
   public function siswa_tampil()
   {
-    $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
-    $data['tampil'] = $this->M_pendaftar->ver_kompetensi($ses_kompetensi);
+    $data['tampil'] = $this->M_admin->tampil_adm();
 
-    $this->load->view('template/header-opver.php');
-    $this->load->view('op-verifikasi/siswa_tampil', $data);
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
     $this->load->view('template/footer-admin.php');
   }
 
@@ -55,92 +44,129 @@ class Op_ver extends CI_Controller {
     $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
     $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
 
-    $this->load->view('template/header-opver.php');
-    $this->load->view('op-verifikasi/siswa_detail', $data);
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_detail', $data);
     $this->load->view('template/footer-admin.php');
   }
 
-  // awal data siswa
+  // akhir data siswa
 
-  // awal verifikasi opsi
-    public function ver_proses($id_siswa)
+ // awal Tampil Adm
+  public function adm_semua()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_semua();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_tjkt()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_tjkt();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_pplg()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_pplg();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_mplb()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_mplb();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_akl()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_akl();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_tm()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_tm();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function adm_to()
+  {
+    $data['tampil'] = $this->M_pendaftar->adm_to();
+
+    $this->load->view('template/header-opadm.php');
+    $this->load->view('op-adm/siswa_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+   // akhir akhir
+
+
+  // awal seleksi adm
+   public function adm_data_sesuai($id_siswa)
     {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Op_ver/siswa_tampil/');
-
+        redirect('index.php/Op_adm/siswa_tampil/');
       } else {
 
         $data_edit = array(
-          'status_verifikasi' => 'Proses',
-        );
-
-        $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
-
-        $this->session->set_flashdata('msg', '
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-              Verifikasi Pilihan <strong>Proses</strong> Berhasil 
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>');
-            // var_dump($id_siswa);
-        redirect('index.php/Op_ver/siswa_tampil/');
-
-      }
-
-      
-    }
-
-    public function ver_tidak_sesuai($id_siswa)
-    {
-      $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
-
-      if(empty($id_siswa)){
-        redirect('index.php/Op_ver/siswa_tampil/');
-
-      } else {
-
-        $data_edit = array(
-          'status_verifikasi' => 'Tidak Sesuai',
-        );
-
-        $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
-
-        $this->session->set_flashdata('msg', '
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              Verifikasi Pilihan <strong>Tidak Sesuai</strong> Berhasil 
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>');
-            // var_dump($id_siswa);
-        redirect('index.php/Op_ver/siswa_tampil/');
-      }
-    }
-
-    public function ver_data_sesuai($id_siswa)
-    {
-      $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
-
-      if(empty($id_siswa)){
-        redirect('index.php/Op_ver/siswa_tampil/');
-
-      } else {
-
-        $data_edit = array(
-          'status_verifikasi' => 'Data Sesuai',
-          'status_seleksi_administrasi' => 'Belum Seleksi',
+          'status_seleksi_administrasi' => 'Data Sesuai',
         );
 
         $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
 
         $this->session->set_flashdata('msg', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              Verifikasi Pilihan <strong>Data Sesuai</strong> Berhasil 
+              Verifikasi Seleksi Administrasi Pilihan <strong>Data Sesuai</strong> Berhasil 
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Op_ver/siswa_tampil/');
+        redirect('index.php/Op_adm/siswa_tampil/');
       }
     }
-   // akhir verifikasi opsi
+
+    public function adm_belum($id_siswa)
+    {
+      $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
+
+      if(empty($id_siswa)){
+        redirect('index.php/Op_adm/siswa_tampil/');
+
+      } else {
+
+        $data_edit = array(
+          'status_seleksi_administrasi' => 'Belum Seleksi',
+        );
+
+        $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
+
+        $this->session->set_flashdata('msg', '
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Verifikasi Seleksi Administrasi Pilihan <strong>Belum Seleksi</strong> Berhasil 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>');
+            // var_dump($id_siswa);
+        redirect('index.php/Op_adm/siswa_tampil/');
+      }
+    }
+  // akhir seleksi adm
   
 }

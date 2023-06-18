@@ -398,7 +398,7 @@ class Admin extends CI_Controller {
     $this->load->view('template/footer-admin.php');
   }
 
-   // awal akhir
+   // akhir akhir
 
   // awal seleksi adm
    public function adm_data_sesuai($id_siswa)

@@ -138,6 +138,13 @@ class Login extends CI_Controller {
 
         redirect('index.php/Op_ver/index');
 
+      }elseif ($data['status']=='op_adm'){
+        $this->session->set_userdata('op_adm', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_adm/index');
+
       }else{
         $url = site_url('index.php/Login/fa');
         echo $this->session->set_flashdata('msg', '

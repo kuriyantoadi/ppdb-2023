@@ -51,19 +51,50 @@ class M_admin extends CI_Model{
     return $query;
   }
 
-  // function count_belum_terverifikasi($ses_kompetensi)
-  // {
-  //   $this->db->select('*');
-  //   $this->db->from('tb_pendaftar');
-  //   $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
-  //   $this->db->where('short_kompetensi_1', $ses_kompetensi);
-  //   $this->db->where('short_kompetensi_1', $ses_kompetensi);
-  //   $query = $this->db->count_all_results();
-  //   return $query;
-  // }
-
   // dashboard akhir
 
+  // awal operator adm
+
+  function count_adm(){
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    $query = $this->db->count_all_results();
+    return $query;
+  }
+
+  function count_selesai_adm(){
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    // $this->db->where('short_kompetensi_1', $ses_kompetensi);
+    $this->db->where('status_seleksi_administrasi', 'Data Sesuai');
+    $query = $this->db->count_all_results();
+    return $query;
+  }
+
+  public function tampil_adm()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    $this->db->join('tb_kompetensi_2', 'tb_pendaftar.id_kompetensi_2 = tb_kompetensi_2.id_kompetensi_2');
+    // $this->db->where('id_siswa', $id_siswa);
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function detail_a()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_pendaftar');
+    $this->db->join('tb_kompetensi_1', 'tb_pendaftar.id_kompetensi_1 = tb_kompetensi_1.id_kompetensi_1');
+    $this->db->join('tb_kompetensi_2', 'tb_pendaftar.id_kompetensi_2 = tb_kompetensi_2.id_kompetensi_2');
+    // $this->db->where('id_siswa', $id_siswa);
+    $query = $this->db->get()->result();
+    return $query;
+  }
+  // akhir operator adm
 
 
 }
