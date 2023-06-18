@@ -147,8 +147,8 @@ class Pendaftar extends CI_Controller
     $this->form_validation->set_rules('tgl_lahir','Tgl_lahir', 'trim|required');
     
     //mengubah format tanggal lahir
-    $tgl_lahir_old = set_value('tgl_lahir');
-    $tgl_lahir = date("d-m-Y", strtotime($tgl_lahir_old));
+    // $tgl_lahir_old = set_value('tgl_lahir');
+    // $tgl_lahir = date("d-m-Y", strtotime($tgl_lahir_old));
 
     $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
     $this->form_validation->set_rules('alamat','Alamat', 'trim|required|min_length[1]');
@@ -251,7 +251,7 @@ class Pendaftar extends CI_Controller
         'asal_sekolah'   => strtoupper(set_value('asal_sekolah')),
         'nama_siswa'   => strtoupper(set_value('nama_siswa')),
         'tempat_lahir'   => strtoupper(set_value('tempat_lahir')),
-        'tgl_lahir'   => $tgl_lahir,
+        'tgl_lahir'   => set_value('tgl_lahir'),
         'no_wa_siswa'   => set_value('no_wa_siswa'),
         'alamat'   => strtoupper(set_value('alamat')),
         'nama_org_tua'   => strtoupper(set_value('nama_org_tua')),
