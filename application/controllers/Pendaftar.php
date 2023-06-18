@@ -99,6 +99,10 @@ class Pendaftar extends CI_Controller
     $this->form_validation->set_rules('nama_siswa','Nama_siswa', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('tempat_lahir','Tempat_lahir', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('tgl_lahir','Tgl_lahir', 'trim|required');
+    
+    //mengubah format tanggal lahir
+    $tgl_lahir_old = set_value('tempat_lahir');
+    $tgl_lahir = date("d-m-Y", strtotime($tgl_lahir_old));
 
     $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
     $this->form_validation->set_rules('alamat','Alamat', 'trim|required|min_length[1]');
@@ -149,8 +153,8 @@ class Pendaftar extends CI_Controller
           redirect($url);
         }
 
-        $cek_no_pendaftaran = $this->M_pendaftar->cek_no_pendaftaran($no_pendaftaran);
         // cek jika nisn sudah terdaftar
+        $cek_no_pendaftaran = $this->M_pendaftar->cek_no_pendaftaran($no_pendaftaran);
         if(!empty($cek_no_pendaftaran))
         {
           $url = site_url('index.php/Pendaftar/upload_pengajuan');
@@ -192,7 +196,7 @@ class Pendaftar extends CI_Controller
       // eksekusi query INSERT
       $data_tambah = [
 
-        'tgl_upload'   => set_value('tgl_upload'),
+        'tgl_upload'   => format_indo(date('Y-m-d H:i:s')),
         'no_pendaftaran'   => set_value('no_pendaftaran'),
         'id_kompetensi_1' => set_value('id_kompetensi_1'),
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
@@ -201,7 +205,7 @@ class Pendaftar extends CI_Controller
         'asal_sekolah'   => set_value('asal_sekolah'),
         'nama_siswa'   => set_value('nama_siswa'),
         'tempat_lahir'   => set_value('tempat_lahir'),
-        'tgl_lahir'   => set_value('tgl_lahir'),
+        'tgl_lahir'   => $tgl_lahir,
         'no_wa_siswa'   => set_value('no_wa_siswa'),
         'alamat'   => set_value('alamat'),
         'nama_org_tua'   => set_value('nama_org_tua'),

@@ -139,7 +139,7 @@ class Login extends CI_Controller {
         redirect('index.php/Op_ver/index');
 
       }else{
-        $url = base_url('index.php/Login/fa');
+        $url = site_url('index.php/Login/fa');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
