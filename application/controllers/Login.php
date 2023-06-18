@@ -146,25 +146,27 @@ class Login extends CI_Controller {
         redirect('index.php/Op_adm/index');
 
       }else{
-        $url = site_url('index.php/Login/fa');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          Username atau Password Salah<br> Silahkan Login Kembali
+          Login Gagal, cek ulang username dan password anda.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         ');
-        redirect($url);
+        redirect('index.php/Login/fa');
       }
+      
+      echo "test";
 
     }
 
     $this->session->set_flashdata('msg', '
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      Username atau Password Salah<br> Silahkan Login Kembali
-    </div>
+       <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          Login Gagal, cek ulang username dan password anda.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     ');
-      $url = base_url('index.php/Login/fa');
-      // redirect($url);
+    redirect('index.php/Login/fa');
   }
 
   public function siswa_logout()

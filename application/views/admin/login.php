@@ -46,20 +46,21 @@
            				    		    <br><?= $this->session->flashdata('msg') ?>
 
                                         <?= form_open('index.php/Login/admin_login') ?>
+                                        <form class="m-t-40" novalidate>
                                             <div class="mb-3">
                                                 <label class="form-label" for="nisn">Username</label>
-                                                <input type="text" class="form-control" id="nisn" placeholder="Masukan Username" name="username" value="">
+                                                <input type="text" class="form-control" id="nisn" placeholder="Masukan Username" name="username" value="" required>
                                                 <span class="text-danger"></span>
                                             </div>
                                             <div class="mb-3">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-grow-1">
-                                                        <label class="form-label" for="password">Sandi</label>
+                                                        <label class="form-label" for="password" required>Sandi</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="input-group auth-pass-inputgroup">
-                                                    <input type="password" class="form-control" placeholder="Enter password" name="password" value="" aria-label="Password" aria-describedby="password-addon">
+                                                    <input type="password" class="form-control" placeholder="Masukan password" name="password" value="" aria-label="Password" aria-describedby="password-addon" required>
                                                     <span class="text-danger"></span>
                                                     <button class="btn btn-light ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                                                 </div>
@@ -68,6 +69,8 @@
                                                 <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Log In</button>
                                             </div>
                                         <?= form_close() ?>
+                                        </form>
+
                                         <!-- </form> -->
 
                                         <!-- <div class="mt-3 text-center">

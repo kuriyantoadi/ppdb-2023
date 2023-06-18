@@ -79,6 +79,33 @@ class Pendaftar extends CI_Controller
 
   public function upload_pengajuan()
   {
+    // awal captcha
+		$config = [
+			"img_path" => "./captcha/",
+			"img_url" => base_url('captcha'),
+			"img_width" => 160,
+			"img_height" => 30,
+			"border" => 4,
+			"expiration" => 30, //gambar otomatis terhapus
+			'word_length'   => 4,
+			'font_size'     => 30,
+			'pool'          => '0123456789',
+
+
+			'colors'        => array(
+                'background' => array(255, 255, 255),
+                'border' => array(255, 255, 255),
+                'text' => array(0, 0, 0),
+				'grid' => array(255, 40, 40)
+			)
+
+		];
+
+		$captcha = create_captcha($config);
+		$this->session->set_userdata('captcha_word', $captcha['word']);
+		$data["image"] = $captcha['image'];
+		// akhir capcha
+
     $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
     $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
 
@@ -88,6 +115,25 @@ class Pendaftar extends CI_Controller
   }
 
   function upload_pengajuan_up(){
+
+    // captcha awal
+
+    $currentCaptcha = $this->session->userdata('captcha_word');
+		$sendedCaptcha = $this->input->post('captcha');
+
+		if($currentCaptcha != $sendedCaptcha) {
+			 $url = site_url('index.php/pendaftar/upload_pengajuan');
+      echo $this->session->set_flashdata('msg', '
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         Maaf anda memasukan Kode Captcha dengan salah, silahkan dicoba kembali.
+        </div>
+        ');
+      redirect($url);
+		}
+
+    // captcha akhir
+
 	
     $this->form_validation->set_rules('tgl_upload','Tgl_upload', 'trim','required','min_length[3]');
     $this->form_validation->set_rules('no_pendaftaran','No_pendaftaran', 'trim','required','min_length[3]'); 
@@ -202,13 +248,13 @@ class Pendaftar extends CI_Controller
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'password'   => md5(set_value('nisn_siswa')),
-        'asal_sekolah'   => set_value('asal_sekolah'),
-        'nama_siswa'   => set_value('nama_siswa'),
-        'tempat_lahir'   => set_value('tempat_lahir'),
+        'asal_sekolah'   => strtoupper(set_value('asal_sekolah')),
+        'nama_siswa'   => strtoupper(set_value('nama_siswa')),
+        'tempat_lahir'   => strtoupper(set_value('tempat_lahir')),
         'tgl_lahir'   => $tgl_lahir,
         'no_wa_siswa'   => set_value('no_wa_siswa'),
-        'alamat'   => set_value('alamat'),
-        'nama_org_tua'   => set_value('nama_org_tua'),
+        'alamat'   => strtoupper(set_value('alamat')),
+        'nama_org_tua'   => strtoupper(set_value('nama_org_tua')),
         'no_wa_org_tua'   => set_value('no_wa_org_tua'),
 
         'status_siswa'   => 'siswa',

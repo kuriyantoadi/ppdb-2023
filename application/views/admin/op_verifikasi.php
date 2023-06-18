@@ -83,6 +83,7 @@
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
                                                 <a class="dropdown-item" href="<?= site_url('index.php/Admin/siswa_detail/'.$row->id_siswa) ?>">Detail</a>
+                                                <a class="dropdown-item" href="<?= site_url('index.php/Admin/note_verifikasi/'.$row->id_siswa) ?>">Catatan</a>
                                                 <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
                                                 <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_proses/'.$row->id_siswa) ?>">Proses</a>
                                                 <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>

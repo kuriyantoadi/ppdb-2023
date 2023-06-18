@@ -65,7 +65,7 @@
 
       
       <div class="form-group">
-        <label class="control-label mt-3" for="email">Nomor Pendaftaran :</label>
+        <label class="control-label mt-3" for="email">Kode Verifikasi :</label>
         <input type="number" class="form-control" placeholder="Nomor Pendaftaran" name="no_pendaftaran" required>
         <p>Dari Pengajuan Pendaftaran</p>
       </div>
@@ -123,10 +123,13 @@
         <div class="col-sm-6">
           <input type="file" name="pdf_pengajuan_pendaftaran" accept="application/pdf" class="form-control-file" id="" required>
           <p>Tidak Boleh Kosong, ukuran maksimal  1 MB, format pdf</p>
+          
+          <h6>Kode Keamanan</h6>
+          <?= $image; ?>
+          <input type="text" name="captcha" class="form-control" id="" required>
         </div>
       </div>
       
-
       <center>
         <div class="form-group align-text-bottom mt-lg-4" style="margin-bottom: 60px;">
           <b class="control-label mt-6">Data dan Berkas Sudah Sesuai?</b>

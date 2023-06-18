@@ -183,6 +183,7 @@ class Admin extends CI_Controller {
 
 
   // awal verifikasi
+  
   public function ver_semua()
   {
     $data['tampil'] = $this->M_pendaftar->ver_semua();
@@ -190,6 +191,34 @@ class Admin extends CI_Controller {
     $this->load->view('template/header-admin.php');
     $this->load->view('admin/op_verifikasi', $data);
     $this->load->view('template/footer-admin.php');
+  }
+
+  public function note_verifikasi($id_siswa){
+    $data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/note_verifikasi', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function note_verifikasi_up(){
+    
+    $id_siswa = htmlspecialchars($this->input->post('id_siswa', true), ENT_QUOTES);
+    $note_ver = htmlspecialchars($this->input->post('note_verifikasi', true), ENT_QUOTES);
+
+    $data_edit = array(
+      'note_verifikasi' => set_value('note_verifikasi'),
+    );
+
+    $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
+
+    $this->session->set_flashdata('msg', '
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Catatan Verfikasi Berhasil 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>');
+        // var_dump($id_siswa);
+    redirect('index.php/Admin/note_verifikasi/'.$id_siswa);
   }
 
   public function ver_tjkt()
