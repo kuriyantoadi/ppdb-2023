@@ -152,7 +152,7 @@ class Admin extends CI_Controller {
       $data_edit = array(
 
         'id_kompetensi_1' => set_value('id_kompetensi_1'),
-        'id_kompetensi_1' => set_value('id_kompetensi_2'),
+        'id_kompetensi_2' => set_value('id_kompetensi_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'asal_sekolah'   => set_value('asal_sekolah'),
         'nama_siswa'   => set_value('nama_siswa'),
