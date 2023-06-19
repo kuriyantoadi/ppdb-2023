@@ -1,4 +1,7 @@
-<footer class="footer">
+            <div style="padding-top: 100px">
+
+            </div>
+            <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
@@ -19,7 +22,7 @@
         <!-- END layout-wrapper -->
 
         <!-- awal live chat -->
-        
+
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

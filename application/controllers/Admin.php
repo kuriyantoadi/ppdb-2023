@@ -19,6 +19,13 @@ class Admin extends CI_Controller {
   //Login User
   public function index()
   {
+    $data['count_akl'] = $this->M_admin->count_akl();
+    $data['count_mplb'] = $this->M_admin->count_mplb();
+    $data['count_tjkt'] = $this->M_admin->count_tjkt();
+    $data['count_pplg'] = $this->M_admin->count_pplg();
+    $data['count_to'] = $this->M_admin->count_to();
+    $data['count_tm'] = $this->M_admin->count_tm();
+
     $this->load->view('template/header-admin');
     $this->load->view('admin/dashboard');
     $this->load->view('template/footer-admin');

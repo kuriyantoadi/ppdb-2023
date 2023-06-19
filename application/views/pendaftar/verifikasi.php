@@ -46,6 +46,7 @@
     </div><!-- end row -->
   
     <div class="col-12">
+      <!-- <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100"> -->
       <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
       <thead>
           <tr>
