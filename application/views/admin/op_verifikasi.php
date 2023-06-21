@@ -40,14 +40,14 @@
                             </div><!-- end col -->
                         </div><!-- end row -->
 
-                        <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                        <table id="datatable-buttons" class="table table-bordered dt-responsive  nowrap w-100">
                             <thead>
                                 <tr>
                                     <th><center>No</th>
                                     <th><center>Tgl Upload</th>
                                     <th><center>Nama Lengkap</th>
-                                    <th><center>Kompetensi</th>
                                     <th><center>Asal Sekolah</th>
+                                    <th><center>Kompetensi</th>
                                     <th><center>Verifikasi</th>
                                     <th><center>Opsi</th>
                                 </tr>
@@ -62,8 +62,8 @@
                                     <td><center><?= $no++ ?></td>
                                     <td><center><?= $row->tgl_upload ?></td>
                                     <td><?= $row->nama_siswa ?></td>
-                                    <td><center><?= $row->short_kompetensi_1 ?></td>
                                     <td><center><?= $row->asal_sekolah ?></td>
+                                    <td><center><?= $row->short_kompetensi_1 ?></td>
                                     <td><center>
                                     <?php if($row->status_verifikasi == 'Data Sesuai' ){ ?>
                                              <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>

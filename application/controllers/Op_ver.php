@@ -159,7 +159,7 @@ class Op_ver extends CI_Controller {
       $note_ver = htmlspecialchars($this->input->post('note_verifikasi', true), ENT_QUOTES);
 
       $data_edit = array(
-        'note_verifikasi' => set_value('note_verifikasi'),
+        'note_verifikasi' => set_value('note_verifikasi')
       );
 
       $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
@@ -169,7 +169,6 @@ class Op_ver extends CI_Controller {
               Catatan Verfikasi Berhasil 
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>');
-          // var_dump($id_siswa);
       redirect('index.php/Op_ver/note_verifikasi/'.$id_siswa);
     }
 
