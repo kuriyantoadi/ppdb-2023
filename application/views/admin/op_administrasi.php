@@ -40,7 +40,7 @@
                             </div><!-- end col -->
                         </div><!-- end row -->
 
-                        <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                        <table id="datatable-buttons" class="table table-bordered dt-responsive  nowrap w-100">
                             <thead>
                                 <tr>
                                     <th><center>No</th>
