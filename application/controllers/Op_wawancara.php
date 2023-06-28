@@ -109,6 +109,9 @@ class Op_wawancara extends CI_Controller {
 
         $data_edit = array(
           'status_tes_wawancara' => 'Belum Tes',
+          'user_tes_wawancara' => '',
+          'note_tes_wawancara' => '',
+          'rekomendasi_tes_wawancara' => '',
         );
 
         $this->M_admin->siswa_edit_up($data_edit, $id_siswa);

@@ -124,13 +124,13 @@
                                                         <th>Note Tes Wawancara</th>
                                                         <td>
                                                             <input type="hidden" name="id_siswa" value="<?= $row->id_siswa ?>">
-                                                            <input type="text" class="form-control" name="note_tes_wawancara" value="<?= $row->note_tes_wawancara ?>" require>
+                                                            <input type="text" class="form-control" name="note_tes_wawancara" value="<?= $row->note_tes_wawancara ?>" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <th>Rekomendasi Masuk Ke Jurusan <?= $ses_kompetensi ?></th>
                                                         <td>
-                                                            <select class="form-control" name="rekomendasi_tes_wawancara" id="" require>
+                                                            <select class="form-control" name="rekomendasi_tes_wawancara" id="" required>
                                                                 <option value="<?= $row->rekomendasi_tes_wawancara ?>">Pilihan ( <?= $row->rekomendasi_tes_wawancara ?> )</option>
                                                                 <option value="Tidak Rekomendasi">Tidak Rekomendasi</option>
                                                                 <option value="Rekomendasi">Rekomendasi</option>
