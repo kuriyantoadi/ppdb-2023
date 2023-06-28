@@ -117,7 +117,7 @@ class Op_wawancara extends CI_Controller {
         $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
 
         $this->session->set_flashdata('msg', '
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
               Status Siswa <strong>Belum Tes Wawancara</strong> Berhasil 
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
