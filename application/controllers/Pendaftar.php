@@ -77,7 +77,7 @@ class Pendaftar extends CI_Controller
     $this->load->view('template/footer-pendaftar.php');
   }
 
-  public function upload_pengajuan()
+  public function upload_pengajuan_tutup()
   {
     // awal captcha
 		$config = [
