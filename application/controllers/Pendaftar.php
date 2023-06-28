@@ -282,6 +282,141 @@ class Pendaftar extends CI_Controller
     }
     
   }
+
+  // awal test akademik 
+
+  public function aka_semua()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_semua();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_tjkt()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_tjkt();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_pplg()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_pplg();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_mplb()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_mplb();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_akl()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_akl();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_tm()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_tm();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+
+  public function aka_to()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_to();
+
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/akademik', $data);
+    $this->load->view('template/footer-pendaftar.php');
+  }
+  
+  // akhir test akademik
+
+  // awal test wawancara 
+
+  // public function wan_semua()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_semua();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_tjkt()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_tjkt();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_pplg()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_pplg();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_mplb()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_mplb();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_akl()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_akl();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_tm()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_tm();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+
+  // public function wan_to()
+  // {
+  //   $data['tampil'] = $this->M_pendaftar->ver_to();
+
+  //   $this->load->view('template/header-pendaftar.php');
+  //   $this->load->view('pendaftar/wawancara', $data);
+  //   $this->load->view('template/footer-pendaftar.php');
+  // }
+  
+  // akhir test akademik
+
 				
 	
   

@@ -41,9 +41,9 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="<?= site_url('index.php/pendaftar/') ?>" class="btn btn-sm btn-primary m-1" type="button">Verifikasi dan Seleksi Administrasi</a>
-                    <a href="<?= site_url('index.php/pendaftar/aka_semua') ?>" class="btn btn-sm btn-info m-1" type="button">Seleksi Akademik</a>
-                    <!-- <a href="<?= site_url('index.php/pendaftar/wan_semua') ?>" class="btn btn-sm btn-success m-1" type="button">Seleksi Wawancara</a> -->
+                    <a href="<?= site_url('index.php/pendaftar/') ?>" class="btn btn-sm btn-secondary m-1" type="button">Verifikasi dan Seleksi Administrasi</a>
+                    <a href="<?= site_url('index.php/pendaftar/aka_semua') ?>" class="btn btn-sm btn-secondary m-1" type="button">Seleksi Akademik</a>
+                    <a href="<?= site_url('index.php/pendaftar/') ?>" class="btn btn-sm btn-secondary m-1" type="button">Seleksi Wawancara</a>
             </div>
         </div>
     </nav>

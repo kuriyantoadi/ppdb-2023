@@ -2,37 +2,37 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
-        <center><img style="margin-top: 25px;" src="<?= base_url() ?>assets/images/logo-banten.png" />
-      </div>
-      <div class="col-md-6">
-        <center>
-          <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
-        </center>
-       
-        <center>
-          <h4><b>Calon Peserta Didik Baru</b></h4>
-        </center>
-        <center>
-          <h5><b>Tahun Ajaran 2023/2024</b></h4>
-        </center>
-        <br>
-        <!-- font ganti jenis -->
-      </div>
-      <div class="col-md-3">
-        <center><img style="margin-top:  25px;" class="img-fluid" src="<?= base_url() ?>assets/images/logo-smkn1.png" />
+        <div class="col-md-3">
+          <center><img style="margin-top: 25px;" src="<?= base_url() ?>assets/images/logo-banten.png" />
+        </div>
+        <div class="col-md-6">
+          <center>
+            <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
+          </center>
+        
+          <center>
+            <h4><b>Verifikasi dan Seleksi Administrasi</b></h4>
+          </center>
+          <center>
+            <h5><b>Tahun Ajaran 2023/2024</b></h4>
+          </center>
+          <br>
+          <!-- font ganti jenis -->
+        </div>
+        <div class="col-md-3">
+          <center><img style="margin-top:  25px;" class="img-fluid" src="<?= base_url() ?>assets/images/logo-smkn1.png" />
+        </div>
       </div>
     </div>
-  </div>
 
 
   <div class="row">
     
-
     <div class="row g-4 mb-3">
+
       <div class="col-12 ">
           <?= $this->session->flashdata('msg') ?>
-          <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a>
+          <!-- <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a> -->
           <br><div class="btn-group" role="group" aria-label="Basic example">
               <a href="<?= site_url('index.php/pendaftar/') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
               <a href="<?= site_url('index.php/pendaftar/akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
