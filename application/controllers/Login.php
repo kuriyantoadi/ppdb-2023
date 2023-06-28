@@ -145,6 +145,65 @@ class Login extends CI_Controller {
 
         redirect('index.php/Op_adm/index');
 
+      }elseif ($data['status']=='op_akademik'){
+        $this->session->set_userdata('op_akademik', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_user', $data['username']);
+        redirect('index.php/op_akademik/index');
+
+
+        //awal op wawancara
+
+      }elseif ($data['status']=='opwan_tjkt'){
+        $this->session->set_userdata('opwan_tjkt', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+      }elseif ($data['status']=='opwan_pplg'){
+        $this->session->set_userdata('opwan_pplg', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+      }elseif ($data['status']=='opver_wan'){
+        $this->session->set_userdata('opwan_akl', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+      }elseif ($data['status']=='opwan_mplb'){
+        $this->session->set_userdata('opwan_mplb', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+      }elseif ($data['status']=='opwan_tm'){
+        $this->session->set_userdata('opwan_tm', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+      }elseif ($data['status']=='opwan_to'){
+        $this->session->set_userdata('opwan_to', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_wawancara/index');
+
+        //akhir op wawancara
+        
       }else{
         echo $this->session->set_flashdata('msg', '
 
