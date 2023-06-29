@@ -170,7 +170,7 @@ class Login extends CI_Controller {
 
         redirect('index.php/Op_wawancara/index');
 
-      }elseif ($data['status']=='opver_wan'){
+      }elseif ($data['status']=='opwan_akl'){
         $this->session->set_userdata('opwan_akl', true);
         $this->session->set_userdata('ses_id', $data['id_user']);
         $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
