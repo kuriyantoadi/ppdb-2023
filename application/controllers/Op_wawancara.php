@@ -30,7 +30,7 @@ class Op_wawancara extends CI_Controller {
     $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
     $data['ses_kompetensi'] = $ses_kompetensi;
     $data['count'] = $this->M_admin->count_siswa($ses_kompetensi);
-    $data['count_wawancara'] = $this->M_admin->count_selesai_wawancara();
+    $data['count_wawancara'] = $this->M_admin->count_selesai_wawancara($ses_kompetensi);
     $data['count_belum_wawancara'] = $data['count'] - $data['count_wawancara'];
 
     $this->load->view('template/header-wawancara.php');
