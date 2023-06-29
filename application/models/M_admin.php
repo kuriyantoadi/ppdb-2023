@@ -3,6 +3,46 @@
 class M_admin extends CI_Model{
 
 
+  // awal user
+  public function user_tampil()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_user');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  public function user_kompetensi()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_user_kompetensi');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  public function status()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_status');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  public function user_tambah($data_tambah)
+  {
+    $this->db->insert('tb_user', $data_tambah);
+  }
+
+  public function user_hapus($id_user)
+  {
+    $this->db->where($id_user);
+    $this->db->delete('tb_user');
+  }
+
+
+
+  // akhir user
+
   //awal siswa
   public function siswa_hapus($id_siswa)
   {

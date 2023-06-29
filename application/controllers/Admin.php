@@ -31,6 +31,79 @@ class Admin extends CI_Controller {
     $this->load->view('template/footer-admin');
   }
 
+  // awal user
+
+  public function user_tampil()
+  {
+    $data['tampil'] = $this->M_admin->user_tampil();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/user_tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function user_tambah()
+  {
+    $data['user_kompetensi'] = $this->M_admin->user_kompetensi();
+    $data['status'] = $this->M_admin->status();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/user_tambah', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function user_tambah_up()
+  {
+    $this->form_validation->set_rules('username','Username', 'trim','required','min_length[1]');
+    $this->form_validation->set_rules('password','Password', 'trim','required','min_length[1]');
+    $this->form_validation->set_rules('status','Status', 'trim','required','min_length[1]');
+    $this->form_validation->set_rules('status_kompetensi','Status_kompetensi', 'trim','required','min_length[1]');
+
+    if ($this->form_validation->run() == FALSE) {
+      
+      echo 'validasi error';  
+      $test = $this->form_validation->error_array();
+      var_dump($test);
+
+    } else {
+
+      $data_tambah = array(
+
+        'username' => set_value('username'),
+        'password' => md5(set_value('password')),
+        'status' => set_value('status'),
+        'status_kompetensi' => set_value('status_kompetensi'),
+
+      );
+
+      $this->M_admin->user_tambah($data_tambah);
+
+      $this->session->set_flashdata('msg', '
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Tambah Data User Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>');
+          // var_dump($id_siswa);
+      redirect('index.php/Admin/user_tampil/');
+
+    }
+
+  }
+
+  public function user_hapus($id_user){
+    $id_user = array('id_user' => $id_user);
+
+    $success = $this->M_admin->user_hapus($id_user);
+    $this->session->set_flashdata('msg', '
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Hapus Data User Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    ');
+    redirect('index.php/Admin/user_tampil');
+  }
+  // akhir user
+
   // awal data siswa
 
   public function siswa_tampil()

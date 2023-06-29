@@ -138,52 +138,8 @@
                                 </a>
                             </li>
                             
-                            
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="dripicons-lightbulb"></i>
-                                    <span data-key="t-apps">Operator Akademik</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">Semua</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKJ</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">RPL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">AKL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">OTKP</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TPM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span data-key="">TKR</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a href="<?= base_url() ?>index.php/Admin/user_tampil">
                                     <i class="dripicons-user-group"></i>
                                     <span data-key="">User Operator PPDB</span>
                                 </a>
