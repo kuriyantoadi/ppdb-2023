@@ -57,7 +57,7 @@
 
                                                 <tbody>
                                                     <tr>
-                                                        <th>Status Verifikasi</th>
+                                                        <th>Status Tes Akademik</th>
                                                         <td>
                                                            <?php if($row->status_tes_akademik == 'Sudah Tes' ){ ?>
                                                                 <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah Tes</a>
