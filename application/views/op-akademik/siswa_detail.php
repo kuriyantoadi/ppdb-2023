@@ -31,7 +31,7 @@
                            <?php foreach ($tampil as $row) { ?>
 
                             <div class="card-header">
-                                <a href="<?= site_url('index.php/Op_wawancara/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                                <a href="<?= site_url('index.php/Op_akademik/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
                                 <!-- <a href="<?= site_url('index.php/Op_ver/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a> -->
                                 <!-- <a href="<?= site_url('index.php/Op_ver/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a> -->
                                     <div class="btn-group" role="group">
@@ -39,7 +39,6 @@
                                             Opsi <i class="mdi mdi-chevron-down"></i>
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                            <a class="dropdown-item" href="<?= site_url('index.php/Op_akademik/siswa_detail/'.$row->id_siswa) ?>">Detail</a>
                                             <a class="dropdown-item" href="<?= site_url('index.php/Op_akademik/aka_tes_selesai/'.$row->id_siswa) ?>">Selesai Tes</a>
                                             <a class="dropdown-item" href="<?= site_url('index.php/Op_akademik/aka_tes_belum/'.$row->id_siswa) ?>">Belum Tes</a>
                                     </div>
@@ -60,14 +59,10 @@
                                                     <tr>
                                                         <th>Status Verifikasi</th>
                                                         <td>
-                                                            <?php if($row->status_verifikasi == 'Data Sesuai' ){ ?>
-                                                                <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>
-                                                            <?php }elseif($row->status_verifikasi == 'Proses'){ ?>
-                                                                <a class="btn-info waves-effect waves-light btn-sm btn-sm btn-rounded">Proses</a>
-                                                            <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
-                                                                <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
+                                                           <?php if($row->status_tes_akademik == 'Sudah Tes' ){ ?>
+                                                                <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah Tes</a>
                                                             <?php }else{ ?>
-                                                                <a class="btn-secondary btn-sm btn-rounded">Menunggu</a>
+                                                                <a class="btn-secondary btn-sm btn-rounded">Belum Tes</a>
                                                             <?php } ?>
                                                         </td>
                                                     </tr>
