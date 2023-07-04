@@ -109,14 +109,14 @@
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" data-key="t-menu">Verifikasi PPDB</li>
                             <li>
-                                <a href="<?= base_url() ?>index.php/Op_wawancara/index">
+                                <a href="<?= base_url() ?>index.php/Op_wawancara_full/index">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="<?= base_url() ?>index.php/Op_wawancara/siswa_tampil">
+                                <a href="<?= base_url() ?>index.php/Op_wawancara_full/siswa_tampil">
                                     <i class="dripicons-microphone"></i>
                                     <span data-key="">Operator Tes Wawancara</span>
                                 </a>
