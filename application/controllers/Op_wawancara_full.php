@@ -33,7 +33,7 @@ class Op_wawancara_full extends CI_Controller {
     $data['count_wawancara'] = $this->M_admin->count_selesai_wawancara($ses_kompetensi);
     $data['count_belum_wawancara'] = $data['count'] - $data['count_wawancara'];
 
-    $this->load->view('template/header-wawancara.php');
+    $this->load->view('template/header-wawancara-full.php');
     $this->load->view('op-wawancara-full/dashboard', $data);
     $this->load->view('template/footer-admin.php');
   }
@@ -43,7 +43,7 @@ class Op_wawancara_full extends CI_Controller {
     $ses_kompetensi = $this->session->userdata('ses_status_kompetensi');
     $data['tampil'] = $this->M_pendaftar->ver_kompetensi($ses_kompetensi);
 
-    $this->load->view('template/header-wawancara.php');
+    $this->load->view('template/header-wawancara-full.php');
     $this->load->view('op-wawancara-full/siswa_tampil', $data);
     $this->load->view('template/footer-admin.php');
   }
@@ -58,7 +58,7 @@ class Op_wawancara_full extends CI_Controller {
     $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
     $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
 
-    $this->load->view('template/header-wawancara.php');
+    $this->load->view('template/header-wawancara-full.php');
     $this->load->view('op-wawancara-full/siswa_detail', $data);
     $this->load->view('template/footer-admin.php');
   }
