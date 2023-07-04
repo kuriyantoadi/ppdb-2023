@@ -71,7 +71,7 @@ class Op_wawancara extends CI_Controller {
         $rekomendasi_tes_wawancara = htmlspecialchars($this->input->post('rekomendasi_tes_wawancara', true), ENT_QUOTES);
 
         if(empty($id_siswa)){
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
 
         } else {
 
@@ -90,7 +90,7 @@ class Op_wawancara extends CI_Controller {
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
         }
     }
 
@@ -99,7 +99,7 @@ class Op_wawancara extends CI_Controller {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
 
       } else {
 
@@ -118,7 +118,7 @@ class Op_wawancara extends CI_Controller {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
       }
     }
 
@@ -127,7 +127,7 @@ class Op_wawancara extends CI_Controller {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
       } else {
 
         $data_edit = array(
@@ -142,7 +142,7 @@ class Op_wawancara extends CI_Controller {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
-        redirect('index.php/Op_wawancara-full/siswa_tampil/');
+        redirect('index.php/Op_wawancara_full/siswa_tampil/');
       }
     }
 
