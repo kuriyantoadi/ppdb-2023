@@ -55,8 +55,11 @@
                                     <td>
                                         <center>
                                         <!-- <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>" class="btn btn-sm btn-primary">Detail</a> -->
-                                        <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>" class="btn btn-sm btn-info">Sudah</a>
-                                        <a href="<?= site_url('index.php/Op_wawancara/wawancara_belum/'.$row->id_siswa) ?>" class="btn btn-sm btn-danger">Belum</a> 
+                                        <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>"  class="btn btn-sm btn-success"
+                                        onclick="return confirm('Anda yakin Siswa Tersebut <b>Sudah Tes</b> Wawancara <?= $row->username ?> ?')">Sudah</a>
+
+                                        <a href="<?= site_url('index.php/Op_wawancara/wawancara_belum/'.$row->id_siswa) ?>" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Anda yakin Siswa Tersebut <b>Belum Tes</b> Wawancara <?= $row->username ?> ?')">Belum</a> 
                                     </div>
                                     </td>
                                     
