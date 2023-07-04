@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Op_wawancara extends CI_Controller {
+class Op_wawancara_full extends CI_Controller {
 
   public function __construct()
     {
