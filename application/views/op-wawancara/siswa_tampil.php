@@ -54,8 +54,9 @@
                                     </td>
                                     <td>
                                         <center>
-                                        <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>" class="btn btn-sm btn-primary">Detail</a>
-                                        
+                                        <!-- <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>" class="btn btn-sm btn-primary">Detail</a> -->
+                                        <a href="<?= site_url('index.php/Op_wawancara/siswa_detail/'.$row->id_siswa) ?>" class="btn btn-sm btn-info">Sudah</a>
+                                        <a href="<?= site_url('index.php/Op_wawancara/wawancara_belum/'.$row->id_siswa) ?>" class="btn btn-sm btn-danger">Belum</a> 
                                     </div>
                                     </td>
                                     

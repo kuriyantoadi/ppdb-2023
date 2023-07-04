@@ -94,10 +94,6 @@ class Op_wawancara extends CI_Controller {
         }
     }
 
-
-
-  // awal data siswa
-
     public function wawancara_belum($id_siswa)
     {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
@@ -126,61 +122,30 @@ class Op_wawancara extends CI_Controller {
       }
     }
 
-    public function ver_data_sesuai($id_siswa)
+    public function wawancara_sudah($id_siswa)
     {
       $id_siswa = htmlspecialchars($id_siswa, ENT_QUOTES);
 
       if(empty($id_siswa)){
         redirect('index.php/Op_wawancara/siswa_tampil/');
-
       } else {
 
         $data_edit = array(
-          'status_verifikasi' => 'Data Sesuai',
-          'status_seleksi_administrasi' => 'Belum Seleksi',
+          'status_tes_wawancara' => 'Sudah Tes',
         );
 
         $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
 
         $this->session->set_flashdata('msg', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              Verifikasi Pilihan <strong>Data Sesuai</strong> Berhasil 
+              Status Siswa <strong>Belum Tes Wawancara</strong> Berhasil 
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>');
             // var_dump($id_siswa);
         redirect('index.php/Op_wawancara/siswa_tampil/');
       }
     }
-   // akhir verifikasi opsi
 
-   // awal note verifikasi
-
-    public function note_verifikasi($id_siswa){
-      $data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
-
-      $this->load->view('template/header-opver.php');
-      $this->load->view('op-verifikasi/note_verifikasi', $data);
-      $this->load->view('template/footer-admin.php');
-    }
-
-    public function note_verifikasi_up(){
-      
-      $id_siswa = htmlspecialchars($this->input->post('id_siswa', true), ENT_QUOTES);
-      $note_ver = htmlspecialchars($this->input->post('note_verifikasi', true), ENT_QUOTES);
-
-      $data_edit = array(
-        'note_verifikasi' => set_value('note_verifikasi')
-      );
-
-      $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
-
-      $this->session->set_flashdata('msg', '
-          <div class="alert alert-info alert-dismissible fade show" role="alert">
-              Catatan Verfikasi Berhasil 
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>');
-      redirect('index.php/Op_ver/note_verifikasi/'.$id_siswa);
-    }
 
    // akhir note verifikasi
   
