@@ -18,6 +18,11 @@ class M_login extends CI_Model{
     return $login;
   }
 
+  function siswa_login($nisn_siswa, $password){
+    $login = $this->db->query("SELECT * from tb_siswa_diterima where nisn_siswa='$nisn_siswa' AND password=md5('$password') ");
+    return $login;
+  }
+
 
 }
 

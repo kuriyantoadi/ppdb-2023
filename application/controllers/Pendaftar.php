@@ -9,6 +9,8 @@ class Pendaftar extends CI_Controller
     parent::__construct();
     $this->load->model('M_pendaftar');
     $this->load->model('M_kompetensi');
+    $this->load->model('M_login');
+
 
     // $this->load->model('M_');
   }
@@ -348,74 +350,61 @@ class Pendaftar extends CI_Controller
     $this->load->view('template/footer-pendaftar.php');
   }
   
-  // akhir test akademik
+  // login pendaftar awal
 
-  // awal test wawancara 
+  public function login(){
+    $this->load->view('pendaftar/login');
+  }
 
-  // public function wan_semua()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_semua();
 
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
+  public function siswa_login()
+  {
+    $nisn_siswa = htmlspecialchars($this->input->post('nisn_siswa', true), ENT_QUOTES);
+    $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
 
-  // public function wan_tjkt()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_tjkt();
+    $cek_login = $this->M_login->siswa_login($nisn_siswa, $password);
 
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
+    if ($cek_login->num_rows() > 0) {
+      $data = $cek_login->row_array();
 
-  // public function wan_pplg()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_pplg();
+      if ($data['status']=='pfqqe2266c') {
+        $this->session->set_userdata('pfqqe2266c', true);
+        $this->session->set_userdata('id_siswa_diterima', $data['id_siswa_diterima']);
+        $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
+        redirect('index.php/Daftar_ulang/index');
 
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
+      }else{
+        echo $this->session->set_flashdata('msg', '
 
-  // public function wan_mplb()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_mplb();
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          Login Gagal, cek ulang nisn dan password anda.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        ');
+        redirect('index.php/Login/fa');
+      }
+      
+      echo "test";
 
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
+    }
 
-  // public function wan_akl()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_akl();
+    $this->session->set_flashdata('msg', '
+       <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          Login Gagal, cek ulang nisn dan password anda.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    ');
+    redirect('index.php/Pendaftaran/login');
+  }
 
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
 
-  // public function wan_tm()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_tm();
-
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
-
-  // public function wan_to()
-  // {
-  //   $data['tampil'] = $this->M_pendaftar->ver_to();
-
-  //   $this->load->view('template/header-pendaftar.php');
-  //   $this->load->view('pendaftar/wawancara', $data);
-  //   $this->load->view('template/footer-pendaftar.php');
-  // }
-  
-  // akhir test akademik
+  public function siswa_logout()
+  {
+    $this->session->sess_destroy();
+    $url = base_url();
+    redirect('index.php/Pendaftar/login');
+  }
+  // login pendaftar akhir
 
 				
 	
