@@ -83,9 +83,8 @@
     <p style="text-align: justify;">
       Demikian surat pernyataan ini saya buat dalam keadaan sadar, tanpa paksaan, dan dibuat dengan sebenar-benarnya.
     </p>
-
     <!-- tanda tangan siswa dan orang tua -->
-    <img height="200px" align="center" src="<?= base_url() ?>assets/file/footer-pakta-integritas.png" style="margin-right:  80px; margin-top: 30px"/>
+    <img height="160px" align="center" src="<?= base_url() ?>assets/file/footer-pakta-integritas.png" style="margin-right:  80px; margin-top: 10px"/>
 
 
 
@@ -94,13 +93,7 @@
 
 
 <script>
-    // window.print();
-
-    PSPDFKit.load(configuration).then((instance) => {
-  // Print when loaded.
-  //
-  instance.print();
-});
+    window.print();
 </script>
 
 

@@ -12,6 +12,12 @@ class M_daftar_ulang extends CI_Model{
     return $query;
   }
 
+  public function form_up($data_edit, $id_siswa_diterima)
+  {
+     $this->db->where('id_siswa_diterima', $id_siswa_diterima);
+    $this->db->update('tb_siswa_diterima', $data_edit);
+  }
+
 
 }
 

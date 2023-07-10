@@ -39,7 +39,6 @@
           <td style="padding: 3px">Asal Sekolah</td>
           <td style="padding: 3px">: <?= $row->asal_sekolah ?></td>
         </tr>
-
       </table>
 
       <table style="margin-top: 10px; margin-right: 50px; margin-left: 50px;">
@@ -60,14 +59,12 @@
         </tr>
         <tr>
             <td style="padding: 5px" width="200px"> <h5>Pada Kompetensi Keahlian </h5></td>
-            <td style="padding: 5px"><h5>: <?= $row->kompetensi_keahlian ?> </h5></td>
+            <td style="padding: 5px"><h5> <?= $row->kompetensi_keahlian ?> </h5></td>
         </tr>
       </table>
 
-  <img style="margin-top: 50px; margin-right: 50px; margin-left: 50px;"" height="300px" align="center" src="<?= base_url() ?>assets/file/footer-bukti-diterima.png" style="float: left; margin-top: 150px"/>
-
-
-  <?php } ?>
+      <img style="margin-top: 30px; margin-right: 50px; margin-left: 50px;" height="350px" align="center" src="<?= base_url() ?>assets/file/footer-bukti-diterima.png" style="float: left; margin-top: 150px"/>
+    <?php } ?>
 </div>
 
 

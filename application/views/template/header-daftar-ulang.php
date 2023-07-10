@@ -78,7 +78,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?= base_url() ?>assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Operator</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium">User</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -86,7 +86,7 @@
                                 <!-- <a class="dropdown-item" href="apps-contacts-profile.php"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profil</a> -->
                                 <!-- <a class="dropdown-item" href="auth-lock-screen.php"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i>Password</a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?= site_url('index.php/Login/admin_logout') ?>"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                                <a class="dropdown-item" href="<?= site_url('index.php/Pendaftar/siswa_logout') ?>"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                             </div>
                         </div>
                         <!-- user akhir -->
@@ -107,25 +107,23 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title" data-key="t-menu">Verifikasi PPDB</li>
+                            <li class="menu-title" data-key="t-menu">Daftar Ulang PPDB</li>
                             <li>
-                                <a href="<?= base_url() ?>index.php/Op_wawancara/index">
+                                <a href="<?= base_url() ?>index.php/Daftar_ulang/index">
                                     <i class="dripicons-home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
                             
-                            <li>
+                            <!-- <li>
                                 <a href="<?= base_url() ?>index.php/Op_wawancara/siswa_tampil">
                                     <i class="dripicons-microphone"></i>
                                     <span data-key="">Operator Tes Wawancara</span>
                                 </a>
-                            </li>
+                            </li> -->
             
                         </ul>
                         <!-- Left Menu End -->
-
-
 
                     </div>
                     <!-- Sidebar -->
