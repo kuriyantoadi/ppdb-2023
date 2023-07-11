@@ -101,6 +101,16 @@
                                 <?php foreach ($tampil as $row) { ?>
                                 <tbody>
                                     <tr>
+                                        <th>Status Daftar Ulang</th>
+                                        <td>
+                                             <?php if($row->status_daftar_ulang == 'Sudah' ){ ?>
+                                             <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah</a>
+                                        <?php }else{ ?>
+                                            <a class="btn-secondary btn-sm btn-rounded">Belum</a>
+                                        <?php } ?>
+                                        </td>
+                                    </tr>  
+                                    <tr>
                                         <th>Kompetensi Keahlian</th>
                                         <td><?= $row->kompetensi_keahlian ?></td>
                                     </tr>  

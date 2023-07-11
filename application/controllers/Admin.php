@@ -807,7 +807,10 @@ class Admin extends CI_Controller {
           'rt' => '',
           'rw' => '',
           'kampung_jln' => '',
-
+          'kab_kota' => '',
+          'no_hp_siswa' => '',
+          'no_hp_orgtua' => '',
+         
         );
 
         $this->M_daftar_ulang->form_up($data_edit, $id_siswa_diterima);
