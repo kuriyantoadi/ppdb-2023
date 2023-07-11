@@ -112,7 +112,7 @@
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="<?= base_url() ?>index.php/Admin/siswa_tampil">
                                     <i class="dripicons-user"></i>
                                     <span data-key="">Data Siswa</span>
@@ -134,9 +134,9 @@
                             <li>
                                 <a href="<?= base_url() ?>index.php/Admin/wan_semua">
                                     <i class="dripicons-microphone"></i>
-                                    <span data-key="">Operator Administrasi</span>
+                                    <span data-key="">Operator Wawancara</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <li>
                                 <a href="<?= base_url() ?>index.php/Admin/du_semua">
@@ -145,12 +145,12 @@
                                 </a>
                             </li>
                             
-                            <li>
+                            <!-- <li>
                                 <a href="<?= base_url() ?>index.php/Admin/user_tampil">
                                     <i class="dripicons-user-group"></i>
                                     <span data-key="">User Operator PPDB</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                         </ul>
                         <!-- Left Menu End -->

@@ -69,29 +69,9 @@
                     ?>
                         <!-- Awal Data Siswa Diterima -->
                         <div class="card-header">
-                            <h3 class="card-title">Halaman Dashboard Daftar Ulang</h3>
+                            <h3 class="card-title">Siswa Daftar Ulang</h3>
                             <p>
-                                Selamat Datang di System PPDB SMKN 1 Kragilan, anda sedang login pada akun siswa diterima. 
-                                <ul>
-                                    <li>Lakukan Pengisian Data Sesuai Form di menu <b>Lengkapi Data</b></li>
-                                    <li>Cetak/Print Berkas Formulir Dapodik</li>
-                                    <li>Cetak/Print Berkas Pakta Integritas</li>
-                                    <li>Cetak/Print Berkas Bukti Diterima</li>
-                                </ul>
-                            </p>
-
-                            <?php  if($cek_kondisi->kab_kota == "" || $cek_kondisi->kec == "" || $cek_kondisi->rt == ""){ ?>
-                                <a style="margin: 5px" href="<?= site_url('index.php/Daftar_ulang/form') ?>" class="btn btn-sm btn-success">Lengkapi Data</a>
-                           <?php }else{ ?>
-
-                            <div style="margin: 10px">
-                                <a style="margin: 5px" href="<?= base_url() ?>assets/file/F-PESERTA_DIDIK.pdf" class="btn btn-sm btn-success">Download Form Dapodik</a>
-                                <a style="margin: 5px" href="<?= site_url('index.php/Daftar_ulang/cetak_pakta_integritas') ?>" class="btn btn-sm btn-success">Download Pakta Integritas</a>
-                                <a style="margin: 5px" href="<?= site_url('index.php/Daftar_ulang/cetak_bukti_diterima') ?>" class="btn btn-sm btn-success">Download Bukti Diterima</a>
-                            </div>
-
-                            <?php } ?>
-
+        
                             <table class="table mb-0 table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -103,7 +83,7 @@
                                     <tr>
                                         <th>Status Daftar Ulang</th>
                                         <td>
-                                             <?php if($row->status_daftar_ulang == 'Selesai' ){ ?>
+                                             <?php if($row->status_daftar_ulang == 'Sudah' ){ ?>
                                              <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah</a>
                                         <?php }else{ ?>
                                             <a class="btn-secondary btn-sm btn-rounded">Belum</a>

@@ -60,8 +60,8 @@
                                     <td><center><?= $row->kompetensi_keahlian ?></td>
                                     <td><center><?= $row->asal_sekolah ?></td>
                                    <td><center>
-                                    <?php if($row->status_daftar_ulang == 'Sudah' ){ ?>
-                                             <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah</a>
+                                    <?php if($row->status_daftar_ulang == 'Selesai' ){ ?>
+                                             <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Selesai</a>
                                         <?php }else{ ?>
                                             <a class="btn-secondary btn-sm btn-rounded">Belum</a>
                                         <?php } ?>
@@ -72,9 +72,13 @@
                                         href="<?= site_url('index.php/Admin/du_reset/'.$row->id_siswa_diterima) ?>" onclick="return confirm('Anda yakin Reset data siswa <?= $row->nama_siswa ?> ?')">
                                           <i class="bx bx-reset"></i>
                                         </a>
-                                        <a type="button" class="btn btn-primary waves-effect waves-light btn-sm" title="Edit"
-                                        href="<?= site_url('index.php/Admin/du_siswa_edit/'.$row->id_siswa_diterima) ?>">
-                                          <i class="bx bx-pencil"></i>
+                                        <a type="button" class="btn btn-success waves-effect waves-light btn-sm" title="Sudah"
+                                        href="<?= site_url('index.php/Admin/du_sudah/'.$row->id_siswa_diterima) ?>">
+                                          <i class="bx bx-check"></i>
+                                        </a>
+                                        <a type="button" class="btn btn-secondary waves-effect waves-light btn-sm" title="Belum"
+                                        href="<?= site_url('index.php/Admin/du_belum/'.$row->id_siswa_diterima) ?>">
+                                          <i class="bx bx-x"></i>
                                         </a>
                                         <a type="button" class="btn btn-info waves-effect waves-light btn-sm" title="Lihat"
                                         href="<?= site_url('index.php/Admin/du_siswa_detail/'.$row->id_siswa_diterima) ?>" >

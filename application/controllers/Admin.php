@@ -824,6 +824,15 @@ class Admin extends CI_Controller {
         redirect('index.php/Admin/du_semua/');
       }
     }
+
+    public function du_siswa_detail($id_siswa_diterima)
+    {
+      $data['tampil'] = $this->M_daftar_ulang->cetak_pakta_integritas($id_siswa_diterima);
+
+      $this->load->view('template/header-admin.php');
+      $this->load->view('admin/du_siswa_detail', $data);
+      $this->load->view('template/footer-admin.php');
+    }
     // akhir daftar ulang
  
 }
