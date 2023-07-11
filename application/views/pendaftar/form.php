@@ -82,12 +82,12 @@
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nomor WhatsApp Siswa :</label>
-                                <input type="text" class="form-control" name="no_wa_siswa" placeholder="Nomor WhatsApp" value="<?= $row->no_hp_siswa ?>" required>
+                                <input type="text" class="form-control" name="no_hp_siswa" placeholder="Nomor WhatsApp" value="<?= $row->no_hp_siswa ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label mt-3" for="email">Nomor WhatsApp Orang Tua :</label>
-                                <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_wa_orgtua" value="<?= $row->no_hp_orgtua ?>" required>
+                                <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_hp_orgtua" value="<?= $row->no_hp_orgtua ?>" required>
                             </div>
                                 <!-- <button type="submit" name="upload" value="upload" class="btn btn-primary mb-lg-4 mt-lg-4">Submit</button> -->
                                 <input type="submit" class="btn btn-primary mb-lg-4 mt-lg-4">

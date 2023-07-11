@@ -55,8 +55,9 @@ class Daftar_ulang extends CI_Controller {
     $this->form_validation->set_rules('kec','Kec', 'trim|required');
     $this->form_validation->set_rules('kab_kota','Kab_kota', 'trim|required');
 
-    $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
-   
+    $this->form_validation->set_rules('no_hp_siswa','No_hp_siswa', 'trim|required');
+    $this->form_validation->set_rules('no_hp_orgtua','No_hp_orgtua', 'trim|required');
+
     if ($this->form_validation->run() == FALSE) {
       
       echo 'validasi error';  

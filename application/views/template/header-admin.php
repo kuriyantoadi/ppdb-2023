@@ -137,6 +137,13 @@
                                     <span data-key="">Operator Administrasi</span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="<?= base_url() ?>index.php/Admin/du_semua">
+                                    <i class="dripicons-flag"></i>
+                                    <span data-key="">Operator Daftar Ulang</span>
+                                </a>
+                            </li>
                             
                             <li>
                                 <a href="<?= base_url() ?>index.php/Admin/user_tampil">

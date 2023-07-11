@@ -214,6 +214,84 @@ class M_pendaftar extends CI_Model{
     $query = $this->db->get()->result();
     return $query;
   }
+
+  // daftar ulang awal
+
+  public function du_semua()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('status_diterima', 'DITERIMA');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  public function du_akl()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'AKL');
+    $this->db->where('status_diterima', 'DITERIMA');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_otkp()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'OTKP');
+    $this->db->where('status_diterima', 'DITERIMA');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_tjkt()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'TJKT');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_pplg()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'PPLG');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_mplb()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'MPLB');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_to()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'TO');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+   public function du_tm()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_siswa_diterima');
+    $this->db->where('kompetensi_keahlian', 'TM');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  // daftar ulang akhir
   
 
 }

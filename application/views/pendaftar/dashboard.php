@@ -65,7 +65,7 @@
                     
                     <?php 
                     foreach ($tampil as $cek_kondisi) {       
-                    if($cek_kondisi->status_diterima == "Diterima"){     
+                    if($cek_kondisi->status_diterima == "DITERIMA"){     
                     ?>
                         <!-- Awal Data Siswa Diterima -->
                         <div class="card-header">

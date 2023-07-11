@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
 			parent::__construct();
 			$this->load->model('M_admin');
       $this->load->model('M_pendaftar');
+      $this->load->model('M_daftar_ulang');
 
       // session login
 			if ($this->session->userdata('xeimaiPh9ahs4ie') != true) {
@@ -676,6 +677,150 @@ class Admin extends CI_Controller {
     }
   // akhir tes wawancara
 
+  
+  // awal daftar ulang
+  public function du_semua()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_semua();
 
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_tjkt()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_tjkt();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_pplg()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_pplg();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_mplb()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_mplb();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_akl()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_akl();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_tm()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_tm();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function du_to()
+  {
+    $data['tampil'] = $this->M_pendaftar->du_to();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('admin/op_daftar_ulang', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+
+  public function du_sudah($id_siswa_diterima)
+    {
+      $id_siswa_diterima = htmlspecialchars($id_siswa_diterima, ENT_QUOTES);
+
+      if(empty($id_siswa_diterima)){
+        redirect('index.php/Admin/du_semua/');
+
+      } else {
+
+        $data_edit = array(
+          'status_daftar_ulang' => 'Selesai',
+        );
+
+        $this->M_daftar_ulang->form_up($data_edit, $id_siswa_diterima);
+
+        $this->session->set_flashdata('msg', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              Verifikasi Daftar Ulang  <strong>Selesai </strong> Berhasil 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>');
+            // var_dump($id_siswa);
+        redirect('index.php/Admin/du_semua/');
+      }
+    }
+
+    public function du_belum($id_siswa_diterima)
+    {
+      $id_siswa_diterima = htmlspecialchars($id_siswa_diterima, ENT_QUOTES);
+
+      if(empty($id_siswa_diterima)){
+        redirect('index.php/Admin/du_semua/');
+
+      } else {
+
+        $data_edit = array(
+          'status_daftar_ulang' => 'Belum',
+        );
+
+        $this->M_daftar_ulang->form_up($data_edit, $id_siswa_diterima);
+
+        $this->session->set_flashdata('msg', '
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Verifikasi Daftar ULang Pilihan <strong>Belum </strong> Berhasil 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>');
+            // var_dump($id_siswa);
+        redirect('index.php/Admin/du_semua/');
+      }
+    }
+
+     public function du_reset($id_siswa_diterima)
+    {
+      $id_siswa_diterima = htmlspecialchars($id_siswa_diterima, ENT_QUOTES);
+
+      if(empty($id_siswa_diterima)){
+        redirect('index.php/Admin/du_semua/');
+
+      } else {
+
+        $data_edit = array(
+          'kec' => '',
+          'rt' => '',
+          'rw' => '',
+          'kampung_jln' => '',
+
+        );
+
+        $this->M_daftar_ulang->form_up($data_edit, $id_siswa_diterima);
+
+        $this->session->set_flashdata('msg', '
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Reser Daftar ULang Berhasil 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>');
+            // var_dump($id_siswa);
+        redirect('index.php/Admin/du_semua/');
+      }
+    }
+    // akhir daftar ulang
  
 }
