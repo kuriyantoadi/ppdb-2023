@@ -19,7 +19,7 @@
       <p style="margin-top: 10px; margin-bottom: 10px">Tentang :</p>
       <p style="margin-bottom: 20px"><b>PENGUMUMAN HASIL SELEKSI
       <br>PENERIMAAN PESERTA DIDIK BARU (PPBD)
-      <br>SMK NEGERI 1 KRAGILAN TAHUN PELAJARAN 2021/2022</b></p>
+      <br>SMK NEGERI 1 KRAGILAN TAHUN AJARAN 2023/2024</b></p>
 
     <?php foreach ($tampil as $row) { ?>
 
