@@ -112,7 +112,7 @@
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a href="<?= base_url() ?>index.php/Admin/siswa_tampil">
                                     <i class="dripicons-user"></i>
                                     <span data-key="">Data Siswa</span>
@@ -136,7 +136,7 @@
                                     <i class="dripicons-microphone"></i>
                                     <span data-key="">Operator Wawancara</span>
                                 </a>
-                            </li> -->
+                            </li>
 
                             <li>
                                 <a href="<?= base_url() ?>index.php/Admin/du_semua">
